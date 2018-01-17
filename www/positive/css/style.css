@@ -1,0 +1,166 @@
+/*************
+colours:
+
+key =  "han blue" #44A3FF
+
+triad :
+
+pale green = #A3FF44
+han blue = #44A3FF
+dark teal = #197BD9 ( lighter; #90C9FF )
+
+intense pale green  = #A3FF44
+dark pastel green = #7BD919
+more yellow pale green = #B6FF6A
+
+**************/
+
+
+h1 {
+  color: #004566;
+}
+
+h4 {
+ color: #44A3FF;
+}
+
+body {
+  background-color: #FFF; /* blue grey */
+  font-family: 'Open sans', sans-serif;
+}
+
+a {
+  color: #2F71B2;
+}
+a:visited {
+  color: #5A9AD9;
+}
+
+#title {
+  border-color: #004566;
+  border-bottom: dashed 2px;
+}
+
+#title h4 {
+  color: #90C8FF;
+}
+
+#affirmation-div {
+  max-width: 100%;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 70px;
+}
+
+button {
+  border-radius: 14%;
+  font-family: monospace;
+}
+
+#pronoun-selection {
+  max-width: 100%;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#pronoun-selection input[type='radio'] {
+  margin: 2.5%;
+}
+
+#font-selection {
+  max-width: 100%;
+  display: inline-block;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#font-selection input[type='radio'] {
+  margin: 5%;
+}
+
+#aboutPA {
+  text-align: justify;
+  margin-top: 105px;
+  max-width: 100%;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#contact {
+  text-align: justify;
+  margin-top: 10px;
+  max-width: 100%;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+footer {
+  text-align: center;
+  max-width: 100%;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+footer a {
+    color: #90C8FF;
+}
+footer a:visited {
+    color: #90C8FF;
+}
+
+/***********
+navigation
+************/
+#wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+nav {
+  text-align: right;
+  padding: 4px 0;
+  margin-top: 0px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 5px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 800;
+  padding: 15px 10px;
+}
+
+/*** font classes ***/
+
+.monospace {
+  font-family: Monospace, sans-serif;
+}
+
+.indieflower {
+  font-family:'Indie Flower', cursive;
+}
+
+.bungieinline {
+  font-family: 'Bungee Inline', cursive;
+}
+
+.amita {
+  font-family:'Amita', cursive;
+}
+
+.lobster {
+  font-family: 'Lobster', cursive;
+}
