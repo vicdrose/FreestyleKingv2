@@ -33,6 +33,11 @@ $(document).ready(function() {
     getNewQuote();
   });
 
+  $(document).bind("mobileinit", function(){
+    $.mobile.allowCrossDomainPages = true;
+    $.support.cors = true;
+  });
+
   $('#shareQuote').on('click', function(e) {
     e.preventDefault();
     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + quote + '"' + '- ' + author));
