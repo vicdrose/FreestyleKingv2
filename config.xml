@@ -8,6 +8,14 @@
         PhoneGap Team
     </author>
 
+<icon src="www/logo.png" platform="android" qualifier="ldpi" />
+<icon src="www/logo.png" platform="android" qualifier="mdpi" />
+<icon src="www/logo.png" platform="android" qualifier="hdpi" />
+<icon src="www/logo.png" platform="android" qualifier="xhdpi" />
+<icon src="www/logo.png" platform="android" qualifier="xxhdpi" />
+<icon src="www/logo.png" platform="android" qualifier="xxxhdpi" />
+<icon src="www/logo.png" platform="android" qualifier="fr-xxhdpi" />
+
 
     <plugin name = "cordova-plugin-whitelist" source="npm" spec="1.3.3"/>
     <allow-navigation href="*" />
