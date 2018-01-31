@@ -1,0 +1,19 @@
+body{
+  color: white;
+  background-color: Black;
+  text-align: center;
+	text-shadow: 1px 1px 2px #000000;
+}
+select{
+  color: black;
+}
+.well{
+  background-color: indigo;
+}
+li{
+  float: left;
+  display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}

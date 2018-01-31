@@ -65,6 +65,7 @@ function About() {
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("advanced").style.display="none";
 
 }
 function Extras() {
@@ -76,6 +77,8 @@ function Extras() {
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 }
 function MainMenu() { 
@@ -91,6 +94,8 @@ function MainMenu() {
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 
 }
@@ -105,6 +110,8 @@ function Radio(){
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 
 }
@@ -119,6 +126,8 @@ function Positive(){
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="block";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 }
 function Songs(){
@@ -132,6 +141,8 @@ function Songs(){
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 }
 function Build(){
@@ -145,8 +156,8 @@ function Build(){
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
-
-
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 }
 function Glossary(){
   document.getElementById("logo").style.display="none";
@@ -159,7 +170,8 @@ function Glossary(){
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="block";
-
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 }
 function Random(){
@@ -172,15 +184,18 @@ function Random(){
   document.getElementById("random1").style.display="block";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
-
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
 }
 function Twitch(){
+  document.getElementById("advanced").style.display="none";
 	document.getElementById("extra").style.display="none";
   document.getElementById("twitch").style.display = "block";
   document.getElementById("Build").style.display = "none";
   document.getElementById("random1").style.display="none";
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
+  document.getElementById("about").style.display = "none";
 
 }
 function newElement(){
@@ -235,7 +250,17 @@ rhymes = JSON.parse(results);
   
 }
 function Advanced(){
-  //document.getElementById("advanced");
+  document.getElementById("advanced").style.display="block";
+  document.getElementById("logo").style.display="none";
+  document.getElementById("menu").style.display="none";
+  document.getElementById("extra").style.display="none";
+  document.getElementById("start").style.display="none";
+  document.getElementById("Soundcloud").style.display = "none";
+  document.getElementById("twitch").style.display="none";
+  document.getElementById("Build").style.display = "none";
+  document.getElementById("random1").style.display="none";
+  document.getElementById("positive").style.display="none";
+  document.getElementById("glossary").style.display="none";
 }
 function other(type, Input){
   document.getElementById("content").innerHTML="";
