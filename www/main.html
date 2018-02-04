@@ -84,10 +84,7 @@
   </div>
 
   <div id="start" style="display:none;">
-  <button id='rapbut' style="color:black;" onclick="rapbut()">Rap</button>
-<button id='teachbut' style="color:black;" onclick="teachbut()">Teach</button>
-
-<div id="Teach" style="display:none;"><div class="container-fluid"><br><button style="color:black;" onclick="TeachRandom()">Random Prefix</button>
+ <div id="Teach" style="display:none;"><div class="container-fluid">Teach<br><button style="color:black;" onclick="TeachRandom()">Random Prefix</button>
  
   <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block';" style="color: #000;
   background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
@@ -110,10 +107,11 @@
   <br><br>
 <p style="text-align:center" id='word1'>prefix</p>
 <p style="text-align:center">type or say as many words that begin with the above</p>
-<input type="checkbox" id='randomcheck' name="random" value="random">Random after each entry if checked<br>
+
   <form onsubmit="return false">
 <input style="color:black;" id='input1'><button style="color:black;" type='submit' onclick=Add()>Add</button><button style="color:black;">Speak</button>
     </form>
+    <input type="checkbox" id='randomcheck' name="random" value="random">Random after each entry if checked<br>
   
 <br><br>
 </div>
@@ -123,10 +121,11 @@
 
   </div>
 <div id="Rap" style="display:none;">
+  Rap
 <br>
 <button onclick="RapRandom()" style="background-color: white; color: Black;">Random Word</button>
 <h1 id='word3'>result</h1>
-<br><br><br>
+<br>
 <div class="container-fluid">Results
   <div class="container-fluid well">
  <div class="row">
@@ -136,6 +135,10 @@ Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">r
     </div>
 </div>
 </div>
+<br>
+ <button id='rapbut' style="color:black;" onclick="rapbut()">Rap</button>
+<button id='teachbut' style="color:black;" onclick="teachbut()">Teach</button>
+
 </div>
 
   <div class="classic" id="classic" style="display:none">

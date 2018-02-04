@@ -85,6 +85,7 @@ function About() {
 }
 function Extras() {
   document.getElementById("menu").style.display="none";
+  document.getElementById("classic").style.display = "none";
 	document.getElementById("extra").style.display = "block";
 	document.getElementById("Soundcloud").style.display="none";
 	document.getElementById("radio").style.display = "none";
@@ -98,6 +99,7 @@ function Extras() {
 }
 function MainMenu() { 
 	document.getElementById("start").style.display="none";
+  document.getElementById("classic").style.display = "none";
 	document.getElementById("extra").style.display="none";
 	document.getElementById("about").style.display="none";
 	document.getElementById("Soundcloud").style.display="none";
@@ -116,6 +118,7 @@ function MainMenu() {
 }
 function Radio(){
 	document.getElementById("logo").style.display="none";
+  document.getElementById("classic").style.display = "none";
 	document.getElementById("menu").style.display="none";
 	document.getElementById("extra").style.display="none";
 	document.getElementById("start").style.display="none";
@@ -147,6 +150,7 @@ function Positive(){
 }
 function Songs(){
 	document.getElementById("logo").style.display="none";
+  document.getElementById("classic").style.display = "none";
 	document.getElementById("menu").style.display="none";
 	document.getElementById("extra").style.display="none";
 	document.getElementById("start").style.display="none";
@@ -161,6 +165,7 @@ function Songs(){
 
 }
 function Build(){
+  document.getElementById("classic").style.display = "none";
   document.getElementById("logo").style.display="none";
   document.getElementById("menu").style.display="none";
   document.getElementById("extra").style.display="none";
@@ -191,6 +196,7 @@ function Glossary(){
 }
 function Random(){
   document.getElementById("logo").style.display="none";
+  document.getElementById("classic").style.display = "none";
   document.getElementById("menu").style.display="none";
   document.getElementById("extra").style.display="none";
   document.getElementById("start").style.display="none";
@@ -234,12 +240,12 @@ function AddWord(){
   var li = document.createElement("li");
   var t = document.createTextNode(WordBankInput);
   var but = document.createElement("button");
-  li.innerHTML=""+WordBankInput+": <button style='color:black' onclick=other('rel_rhy','"+WordBankInput+"')>Rhy</button><button style='color:black' onclick=other('ml','"+WordBankInput+"')>Syn</button style='color:black'><button style='color:black' onclick=other('sl','"+WordBankInput+"')>SL</button><button style='color:black' onclick=other('rel_jja','"+WordBankInput+"')>Des</button><button style='color:black' onclick=other('rel_jjb','" +WordBankInput+"')>DesBy</button><button style='color:red' onclick=remove()>Remove</button>";
+  li.innerHTML=""+WordBankInput+": <button style='color:black' onclick=other3('rel_rhy','"+WordBankInput+"')>Rhy</button><button style='color:black' onclick=other3('ml','"+WordBankInput+"')>Syn</button style='color:black'><button style='color:black' onclick=other3('sl','"+WordBankInput+"')>SL</button><button style='color:black' onclick=other3('rel_jja','"+WordBankInput+"')>Des</button><button style='color:black' onclick=other3('rel_jjb','" +WordBankInput+"')>DesBy</button><button style='color:red' onclick=remove()>Remove</button>";
   //but.setAttribute("onclick",Lookup(WordBankInput));<button style='color:black' onclick=other('rel_jjb','" +WordBankInput+"')>DesBy</button>
  // li.appendChild(but);
   WordBank.appendChild(li);
   //prints the wordbank just to show it exists and also appends the input to it.
-  other2(WordBankInput);
+  other3('rel_rhy', WordBankInput);
   document.getElementById("input").value=""
 }
 //another rhyme generator but the one from above is fine too...the one above is super advanced. What I need to do is put the whole above section into a JSON file, put each one into an array and call each different word relationship (sounds like, rhymes, similar to, etc) from a different button for each word. The details are to be determined soon. GOOD NEWS IS THERE ARE WORDS ON THE SCREEN!!!! The api key is included in the link.
@@ -277,7 +283,7 @@ function Advanced(){
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
 }
-function other(type, Input){
+function other3(type, Input){
   document.getElementById("content").innerHTML="";
   $.getJSON('https://api.datamuse.com/words?'+type+'='+Input, function (data) {
     data.forEach(function(element){
@@ -354,12 +360,14 @@ function Add(){
   }else{
     addPre = "";
   }
-addPre += ""+document.getElementById('input1').value+"<br>";
+addPre += ""+document.getElementById('input1').value+" - ";
   localStorage.setItem(document.getElementById('word1').innerHTML, addPre);
   console.log('set: '+document.getElementById('input1').value+' for '+document.getElementById('word1').innerHTML);
 document.getElementById("results3").innerHTML = localStorage.getItem(document.getElementById('word1').innerHTML);
   document.getElementById('input1').value = "";
-  Random();
+ if(document.getElementById('randomcheck').checked){
+   TeachRandom();
+ }
 }
 ////////////////////////////
 // Store -- in the spot of the prefix that is currently set
@@ -367,7 +375,7 @@ document.getElementById("results3").innerHTML = localStorage.getItem(document.ge
 
 //////////////////////////////
 
-function Random(){
+function TeachRandom(){
   document.getElementById("results3").innerHTML = localStorage.getItem(document.getElementById('word1').innerHTML);
   
 document.getElementById("results3").innerHTML = "";
@@ -383,7 +391,7 @@ document.getElementById("results3").innerHTML = "";
 
 prefix=["ba","be","bi","bo","bu","bla","ble","bli","blo","blu","bra","bre","bri","bro","bru", "ca","ce","ci","co","cu","cra","cre","cri","cro","cru","cha","che","chi","cho","chu", "da","de","di","do","du","fa", "fe", "fi", "fo","fu","ga", "ge", "gi", "go","gu","ha", "he", "hi", "ho","hu", "ja", "je", "ji", "jo","ju", "ka", "ke", "ki", "ko","ku","la", "le", "li", "lo","lu", "ma", "me", "mi", "mo","mu", "na", "ne", "ni", "no","nu", "pa", "pe", "pi", "po","pu","pla", "ple", "pli", "plo","plu", "qua","que","qui","quo", "ra", "re", "ri", "ro","ru", "sa", "se", "si", "so","su","sha", "she", "shi", "sho","shu","sta", "ste", "sti", "sto","stu","sla", "sle", "sli", "slo","slu","ta", "te", "ti", "to","tu","tra", "tre", "tri", "tro","tru","tha", "the", "thi", "tho","thu","va", "ve", "vi", "vo","vu","wa", "we", "wi", "wo","wu","ya","ye", "yi", "yo","yu","za","ze","zi","zo","zu","ab", "ac", "ack","ad", "adj", "aer", "af", "ag","ah","aj","ak", "al","am","an","ap","aq","ar","as","at","au","av","aw","ax","az","eb", "ec", "ed","ef", "eg","eh", "el","em","en","ep","eq","er","es","et","eu","ev","ew","ex","ib", "ic", "id","if", "ig", "il","im","in","ip","ir","is","it","iv","ob", "oc", "oct","od", "of", "og","oj","ok", "ol","om","on","op","or","os","ot","ou","ov","ow","ox","oy","oz","ub", "uc","ud", "uf", "ug","uh","udj","uk", "ul","um","un","up","ur","us","ut","uv","uw","uz"];
 
-Random();
+TeachRandom();
 
 function rapbut(){
   

@@ -68,11 +68,23 @@
    <button class='btn btn-black' onclick="Extras()">Extras</button>
    
 
-<div id='start' style="display:none;">
-  <button id='rapbut' onclick="rapbut()">Rap</button>
-<button id='teachbut' onclick="teachbut()">Teach</button>
 
-<div id="Teach" style="display:none;"><div class="container-fluid"><br><p>Teach</p><button onclick=Random()>Random Prefix</button>
+
+
+   <!--<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>-->
+   <br>
+   <div class="donate">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+     <input type="hidden" name="cmd" value="_s-xclick">
+     <input type="hidden" name="hosted_button_id" value="T7P7GDA3KP4C8">
+     <input type="image" src="btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+   </div>
+  </div>
+
+  <div id="start" style="display:none;">
+ <div id="Teach" style="display:none;"><div class="container-fluid">Teach<br><button style="color:black;" onclick="TeachRandom()">Random Prefix</button>
  
   <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block';" style="color: #000;
   background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
@@ -93,53 +105,41 @@
      
   
   <br><br>
-<p id='word1'>prefix</p>
-<p>type or say as many words that begin with the above</p>
+<p style="text-align:center" id='word1'>prefix</p>
+<p style="text-align:center">type or say as many words that begin with the above</p>
+
   <form onsubmit="return false">
-<input id='input1'><button type='submit' onclick=Add()>Add</button><button>Speak</button>
+<input style="color:black;" id='input1'><button style="color:black;" type='submit' onclick=Add()>Add</button><button style="color:black;">Speak</button>
     </form>
+    <input type="checkbox" id='randomcheck' name="random" value="random">Random after each entry if checked<br>
   
 <br><br>
 </div>
 <div class="container-fluid">Results
-  <div class="well" id="results"></div>
+  <div class="well" id="results3" style="background-color:indigo;"></div>
 </div>
 
-Words here get saved to localStorage of Prefix
   </div>
 <div id="Rap" style="display:none;">
-<h3>Rap</h3><br>
-<button onclick="RapRandom()">Random Word</button>
-<br><br>
+  Rap
+<br>
+<button onclick="RapRandom()" style="background-color: white; color: Black;">Random Word</button>
 <h1 id='word3'>result</h1>
-<br><br><br>
+<br>
 <div class="container-fluid">Results
   <div class="container-fluid well">
-  <div class="row">
-    <div class="col-lg-6">Rhymes</div>
-<div class="col-lg-6">Pivot</div>
-    </div>
  <div class="row">
-<div class="col-lg-6 well" id='rapwell'>rhymes will be here</div>
-<div class="col-lg-6 well" id='pivotwell'>pivot words will be here</div>
+Pivot<div class="col-lg-6 well" id='pivotwell' style="background-color:indigo;">pivot words will be here</div>
+Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">rhymes will be here</div>
    </div>
     </div>
 </div>
 </div>
+<br>
+ <button id='rapbut' style="color:black;" onclick="rapbut()">Rap</button>
+<button id='teachbut' style="color:black;" onclick="teachbut()">Teach</button>
+
 </div>
-
-
-   <!--<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>-->
-   <br>
-   <div class="donate">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-     <input type="hidden" name="cmd" value="_s-xclick">
-     <input type="hidden" name="hosted_button_id" value="T7P7GDA3KP4C8">
-     <input type="image" src="btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-   </div>
-  </div>
 
   <div class="classic" id="classic" style="display:none">
 <!--Wordbank Modal-->
@@ -193,12 +193,12 @@ Words here get saved to localStorage of Prefix
     
        </div></span></div><br>
       <!-- Button to open the modal login form -->
-   <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block'" style="color: #000;
+   <button class="btn btn-top" onclick="document.getElementById('id05').style.display='block'" style="color: #000;
   background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
 
    <!-- The Modal1 -->
-   <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+   <div id="id05" class="modal">
+    <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
     <span class="modal-content animate" >
