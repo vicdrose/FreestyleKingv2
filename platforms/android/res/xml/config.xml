@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.transparencyinteractive.freestyleking" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>FreestyleKing</name>
+    <description>
+        FreestyleKing, the best rap app on the market
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <icon platform="android" qualifier="ldpi" src="www/logo.png" />
+    <icon platform="android" qualifier="mdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="hdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="xhdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="xxhdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="xxxhdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="fr-xxhdpi" src="www/logo.png" />
+    <allow-navigation href="*" />
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="loglevel" value="DEBUG" />
+</widget>

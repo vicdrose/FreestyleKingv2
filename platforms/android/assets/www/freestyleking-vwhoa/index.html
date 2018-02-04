@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FreestyleKing vWHOA!</title>
+  
+  
+  <link rel='stylesheet prefetch' href='bootstrap-3.3.7-dist/css/bootstrap.min.css'>
+
+
+      <link rel="stylesheet" href="css/style.css">
+      <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+
+  
+</head>
+
+<body>
+
+  <p>Enter a word</p>
+<input id="input1" type="text" style="color:black;" /><button style="color:black;" onclick="Build()">Go</button><button style="color:black;" onclick="RandomWord()">Random</button>
+<p>Build Bank</p>
+<div class="well">
+  <p class="word" id="word" float="left">Word</p><p style="float:right;">Rhymes</p>
+  <!--
+<select onclick=other(rel_rhy, input)>
+  <option value="Synonym">Synonym</option>
+  <option value="Rhyme">Rhyme</option>
+  <option value="sounds_like">Sounds Like</option>
+  <option value="Describes">Describes</option>
+</select>
+  -->
+  <br /><br />
+<div name="content" id="content" class="well rhymebank" style="background-color:grey; color:white; text-shadow: 2px 2px 1px #000"></div>
+  <p style="float:right;">Synonyms</p>
+  <br /><br />
+  <div name="content2" id="content2" class="well rhymebank" style="background-color:grey; color:white; text-shadow: 2px 2px 1px #000"></div>
+  
+  <p style="float:right;">Sounds Like</p>
+  <br /><br />
+  <div name="content3" id="content3" class="well rhymebank" style="background-color:grey; color:white; text-shadow: 2px 2px 1px #000"></div>
+  <p style="float:right;">Describes</p>
+  <br /><br />
+  <div name="content4" id="content4" class="well rhymebank" style="background-color:grey; color:white; text-shadow: 2px 2px 1px #000"></div>
+  <p style="float:right;">Described By</p>
+  <br /><br />
+  <div name="content5" id="content5" class="well rhymebank" style="background-color:grey; color:white; text-shadow: 2px 2px 1px #000"></div>
+  
+  
+  
+  
+  <br />
+  <button style="float: right; color:black;" onclick=RhymeBank1()>Next</button>
+</div>
+<ul id='wb'>Wordbank<br></ul><br><br>
+<div class='well' >
+<div class='money' id='money'></div>
+  <br><br><div class='well money2' id='money2' style="background-color:grey; color:white; text-shadow: 2px 2px 1px #000"></div>
+</div>
+<br>
+ <input type="radio" name="gender" value="male" id="rhy"> Rhyme
+   <input type="radio" name="gender" value="female" id="syn"> Synonym
+   <input type="radio" name="gender" value="other" id="sl" checked> Sounds Lke
+   <input type="radio" name="gender" value="other" id="des"> Describes
+   <input type="radio" name="gender" value="other" id="desby"> Described By
+<script src='js/jquery-3.2.1.js'></script>
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
