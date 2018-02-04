@@ -60,13 +60,15 @@
 
 
   <div id="menu" class="main-menu btn-group-vertical">
-
-   <button class='btn btn-black' onclick="Start()">Classic</button>
+   <button class='btn btn-black' onclick="Start()">Start</button>
+   <button class='btn btn-black' onclick="Classic()">Classic</button>
    <button class='btn btn-black' onclick="Advanced()">Quickplay</button>
    <button class='btn btn-black' onclick="Build()">Advanced</button>
    <button class='btn btn-black' onclick="Random()">Random</button>
    <button class='btn btn-black' onclick="Extras()">Extras</button>
-   <button class='btn btn-black' onclick="About()">About</button>
+   
+
+
 
 
    <!--<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>-->
@@ -81,7 +83,65 @@
    </div>
   </div>
 
-  <div class="START" id="start" style="display:none">
+  <div id="start" style="display:none;">
+  <button id='rapbut' style="color:black;" onclick="rapbut()">Rap</button>
+<button id='teachbut' style="color:black;" onclick="teachbut()">Teach</button>
+
+<div id="Teach" style="display:none;"><div class="container-fluid"><br><button style="color:black;" onclick="TeachRandom()">Random Prefix</button>
+ 
+  <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block';" style="color: #000;
+  background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
+
+   <!-- The Modal1 -->
+   <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <span class="modal-content animate" >
+
+     <div class="container">
+     <iframe id="startwith" src="http://www.morewords.com/starts-with/leg/" height="400p" width="100%"></iframe>
+    <!--end modal-->
+   </div>
+     </span>
+      </div>
+     
+  
+  <br><br>
+<p style="text-align:center" id='word1'>prefix</p>
+<p style="text-align:center">type or say as many words that begin with the above</p>
+  <form onsubmit="return false">
+<input style="color:black;" id='input1'><button style="color:black;" type='submit' onclick=Add()>Add</button><button style="color:black;">Speak</button>
+    </form>
+  
+<br><br>
+</div>
+<div class="container-fluid">Results
+  <div class="well" id="results3" style="background-color:indigo;"></div>
+</div>
+
+  </div>
+<div id="Rap" style="display:none;">
+<br>
+<button onclick="RapRandom()" style="background-color: white; color: Black;">Random Word</button>
+<h1 id='word3'>result</h1>
+<br><br><br>
+<div class="container-fluid">Results
+  <div class="container-fluid well">
+  <div class="row">
+    <div class="col-lg-6">Rhymes</div>
+<div class="col-lg-6">Pivot</div>
+    </div>
+ <div class="row">
+<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">rhymes will be here</div>
+<div class="col-lg-6 well" id='pivotwell' style="background-color:indigo;">pivot words will be here</div>
+   </div>
+    </div>
+</div>
+</div>
+</div>
+
+  <div class="classic" id="classic" style="display:none">
 <!--Wordbank Modal-->
 <button class="btn" onclick="document.getElementById('wb').style.display='block'" style="color: #000;
   background-color: #7FFFBA; text-shadow: 1px 1px white;">Wordbank</button>
@@ -211,6 +271,7 @@
    <button class='btn btn-black' onclick="Radio()">Radio</button>
     <button class='btn btn-black' onclick="Resources()">Resources</button>
    <button class='btn btn-black' onclick="Twitch()">Stream</button>
+   <button class='btn btn-black' onclick="About()">About</button>
     
     <br>
     <a href="http://www.prefixsuffix.com/rootchart.php?navblks=1011000">Root Words</a>

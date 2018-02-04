@@ -7,6 +7,13 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
+    <icon platform="android" qualifier="ldpi" src="www/logo.png" />
+    <icon platform="android" qualifier="mdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="hdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="xhdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="xxhdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="xxxhdpi" src="www/logo.png" />
+    <icon platform="android" qualifier="fr-xxhdpi" src="www/logo.png" />
     <allow-navigation href="*" />
     <content src="index.html" />
     <access origin="*" />
