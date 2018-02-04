@@ -240,12 +240,12 @@ function AddWord(){
   var li = document.createElement("li");
   var t = document.createTextNode(WordBankInput);
   var but = document.createElement("button");
-  li.innerHTML=""+WordBankInput+": <button style='color:black' onclick=other('rel_rhy','"+WordBankInput+"')>Rhy</button><button style='color:black' onclick=other('ml','"+WordBankInput+"')>Syn</button style='color:black'><button style='color:black' onclick=other('sl','"+WordBankInput+"')>SL</button><button style='color:black' onclick=other('rel_jja','"+WordBankInput+"')>Des</button><button style='color:black' onclick=other('rel_jjb','" +WordBankInput+"')>DesBy</button><button style='color:red' onclick=remove()>Remove</button>";
+  li.innerHTML=""+WordBankInput+": <button style='color:black' onclick=other3('rel_rhy','"+WordBankInput+"')>Rhy</button><button style='color:black' onclick=other3('ml','"+WordBankInput+"')>Syn</button style='color:black'><button style='color:black' onclick=other3('sl','"+WordBankInput+"')>SL</button><button style='color:black' onclick=other3('rel_jja','"+WordBankInput+"')>Des</button><button style='color:black' onclick=other3('rel_jjb','" +WordBankInput+"')>DesBy</button><button style='color:red' onclick=remove()>Remove</button>";
   //but.setAttribute("onclick",Lookup(WordBankInput));<button style='color:black' onclick=other('rel_jjb','" +WordBankInput+"')>DesBy</button>
  // li.appendChild(but);
   WordBank.appendChild(li);
   //prints the wordbank just to show it exists and also appends the input to it.
-  other2(WordBankInput);
+  other3('rel_rhy', WordBankInput);
   document.getElementById("input").value=""
 }
 //another rhyme generator but the one from above is fine too...the one above is super advanced. What I need to do is put the whole above section into a JSON file, put each one into an array and call each different word relationship (sounds like, rhymes, similar to, etc) from a different button for each word. The details are to be determined soon. GOOD NEWS IS THERE ARE WORDS ON THE SCREEN!!!! The api key is included in the link.
@@ -283,7 +283,7 @@ function Advanced(){
   document.getElementById("positive").style.display="none";
   document.getElementById("glossary").style.display="none";
 }
-function other(type, Input){
+function other3(type, Input){
   document.getElementById("content").innerHTML="";
   $.getJSON('https://api.datamuse.com/words?'+type+'='+Input, function (data) {
     data.forEach(function(element){
@@ -365,7 +365,9 @@ addPre += ""+document.getElementById('input1').value+" - ";
   console.log('set: '+document.getElementById('input1').value+' for '+document.getElementById('word1').innerHTML);
 document.getElementById("results3").innerHTML = localStorage.getItem(document.getElementById('word1').innerHTML);
   document.getElementById('input1').value = "";
-  TeachRandom();
+ if(document.getElementById('randomcheck').checked){
+   TeachRandom();
+ }
 }
 ////////////////////////////
 // Store -- in the spot of the prefix that is currently set
