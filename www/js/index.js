@@ -360,7 +360,7 @@ function Add(){
   }else{
     addPre = "";
   }
-addPre += ""+document.getElementById('input1').value+"<br>";
+addPre += ""+document.getElementById('input1').value+" - ";
   localStorage.setItem(document.getElementById('word1').innerHTML, addPre);
   console.log('set: '+document.getElementById('input1').value+' for '+document.getElementById('word1').innerHTML);
 document.getElementById("results3").innerHTML = localStorage.getItem(document.getElementById('word1').innerHTML);
