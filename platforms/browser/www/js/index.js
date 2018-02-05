@@ -43,18 +43,6 @@ $(document).ready(function() {
     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + quote + '"' + '- ' + author));
   });
 });
-
-if(AdMob) AdMob.createBanner( {
-    adId:admobid.banner, 
-    position:AdMob.AD_POSITION.BOTTOM_CENTER, 
-    autoShow:true} );
-
-// preppare and load ad resource in background, e.g. at begining of game level
-if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
-
-// show the interstitial later, e.g. at end of game level
-if(AdMob) AdMob.showInterstitial();
-
 function Start() {
   document.getElementById("menu").style.display="none";
   document.getElementById("start").style.display = "block";
