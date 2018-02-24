@@ -55,7 +55,7 @@ function callMeToShowBanners() {
     admob.showBannerAd(true);
 }
 ////////////////////////
-/*
+
 var admobid = {};
 
 // TODO: replace the following ad units with your own
