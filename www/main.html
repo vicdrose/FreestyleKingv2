@@ -517,6 +517,29 @@ trope: A term often used to denote figures of speech in which words are used in 
 
 
     <script src="js/index.js"></script>
+<script>
+function onDeviceReady() {
+      document.removeEventListener('deviceready', onDeviceReady, false);
+      
+      // Set AdMobAds options: 
+      admob.setOptions({
+        publisherId:          "pub-0137702917028406",  // Required 
+        interstitialAdId:     "ca-app-pub-0137702917028406/9181679045",  // Optional 
+        banner:               "ca-app-pub-0137702917028406/8301564412"
+      /*  tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional 
+        tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional 
+        tappxShare:           0.5                                        // Optional */
+      });
+      
+      // Start showing banners (atomatic when autoShowBanner is set to true) 
+      admob.createBannerView();
+      
+      // Request interstitial (will present automatically when autoShowInterstitial is set to true) 
+      admob.requestInterstitialAd();
+    }
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+   </script>
 
 </body>
 </html>
