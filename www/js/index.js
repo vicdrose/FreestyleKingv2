@@ -287,7 +287,7 @@ function other3(type, Input){
   document.getElementById("content").innerHTML="";
   $.getJSON('https://api.datamuse.com/words?'+type+'='+Input, function (data) {
     data.forEach(function(element){
-      $( "#content" ).append("<span onclick=other2('"+element.word+"')>"+ element.word +"</span> - "  );
+      $( "#content" ).append("<span onclick=other4('"+element.word+"')>"+ element.word +"</span> - "  );
       //add button onclick here for functionality. call other on buttons in modal
     })
   });
@@ -320,6 +320,34 @@ function other2(Input){
 }
   
 }
+
+function other4(Input){
+  if(document.getElementById('rhy').checked) {
+    console.log("rhyme checked");
+    other3('rel_rhy', Input);
+  
+}else if(document.getElementById('syn').checked) {
+  console.log("synonym checked");
+  other3('ml', Input);
+  //Female radio button is checked
+}else if(document.getElementById('sl').checked) {
+  console.log("sounds like checked");
+  other3('sl', Input);
+  //Female radio button is checked
+}else if(document.getElementById('des').checked) {
+  console.log("des checked");
+  other3('rel_jja', Input);
+  //Female radio button is checked
+}else if(document.getElementById('desby').checked) {
+  console.log("desby checked");
+  other3('rel_jjb', Input);
+  //Female radio button is checked
+}else{
+  console.log("error");
+}
+  
+}
+
 var word1 = "";
 function RandomWord(){
   word1 = words[Math.floor(Math.random() * words.length)];
