@@ -505,3 +505,157 @@ var newstring = '';
   }
   return newstring;
 }
+//soundcloud shuffler
+$(function() {
+    var iframe = document.querySelector('#soundcloud_player iframe');
+    widget = SC.Widget(iframe);        
+    widget.bind(SC.Widget.Events.READY, function() {
+        widget.bind(SC.Widget.Events.FINISH, function() {        
+            play_next_shuffled_song();
+        });
+
+        widget.getSounds(function(sounds) {
+            create_shuffled_indexes(sounds.length);
+            play_next_shuffled_song();
+        });               
+    });
+    $("#button_sc_next").on("click", play_next_shuffled_song);
+});
+
+function play_next_shuffled_song() {
+    if (current_index >= song_indexes.length) {
+        current_index = 0;
+    }
+    var track_number = song_indexes[current_index];
+    current_index++;
+    widget.skip(track_number);
+    console.log(track_number);
+}
+
+function create_shuffled_indexes (num_songs) {
+    for (var i=0;i<num_songs;i++) {
+        song_indexes.push(i);
+    }
+    song_indexes = shuffle(song_indexes);
+}
+
+//+ Jonas Raoni Soares Silva
+//@ http://jsfromhell.com/array/shuffle [v1.0]
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+
+var x = document.getElementById("output");
+var Raps = [];
+var SavedRaps = "";
+//we need to add rap objects to this array, this is an array of rap objects
+
+//Rap Objects:
+//Title: head
+//Beat: Oh Boy
+//Lyrics: I could go for some head at anytime but im keeping my bread
+
+
+// New Rap Object
+//Function NewRap(rap){
+// Var Rap = new rap{
+// Title: "",
+// Beat:  "",
+// Lyrics: "";
+//}
+//Raps.push(rap)
+//}
+// This take a rap object and adds it to the array once you press enter
+
+//This array needs to be saved to local storage
+updateRaps(); //dkjgkdhs
+function saveRap(){//a,b,c){
+  
+var output = "";
+  document.getElementById('output').innerHTML = "";
+var rap = {
+  title: document.getElementById('title').value, 
+  beat: document.getElementById('beat').value, 
+  lyrics: document.getElementById('lyrics').value
+  //tags:"blue"};
+}
+
+Raps.push(rap); //Add Rap to array
+
+console.log(Raps);
+  
+  for (var x in Raps) {
+    console.log(Raps[x]);
+    document.getElementById('output').innerHTML += ("<div class='well'><br>Title: " +Raps[x].title+"<br>Beat: "+Raps[x].beat+"<br>Lyrics: "+Raps[x].lyrics+"<br></div>");
+}
+//for each element in Raps
+    //save into localStorage
+  
+   
+  
+  SavedRaps = JSON.stringify(Raps);
+  localStorage.setItem(document.getElementById('title').value, JSON.stringify(JSON.parse(SavedRaps)[JSON.parse(SavedRaps).length-1]));
+  console.log(localStorage.getItem(document.getElementById('title').value));
+//experiment
+  localStorage.setItem('saved', SavedRaps);
+  console.log(localStorage.getItem('saved'));
+//
+  Clear();//zcxlkvhl
+}
+function Clear(){
+  //console.log("Dawg food");
+  document.getElementById('title').value = "";
+  document.getElementById('beat').value = "";
+  document.getElementById('lyrics').value = "";
+}
+
+SavedRaps = JSON.stringify(Raps);
+var Saved = JSON.parse(SavedRaps); //JSON.parse(SavedRaps)[0].title
+var i;
+
+//this method needs adjustment, but this is the final job
+
+for (i in JSON.parse(SavedRaps)) {
+    console.log(JSON.parse(SavedRaps)[i]);
+    document.getElementById('output').innerHTML += ("<div class='well'><br>Title: " +JSON.parse(SavedRaps)[i].title+"<br>Beat: "+ JSON.parse(SavedRaps)[i].beat +"<br>Lyrics: "+JSON.parse(SavedRaps)[i].lyrics+"<br></div>");
+}
+
+///THIS IS SUPER CLOSE TO DONE! LOVEEE!
+
+//Basically, save the object to JSON
+//Load the JSON into
+
+//For each object in SavedRaps -- show it into the output -- We done!
+//use localstorage
+JSON.parse(SavedRaps)[JSON.parse(SavedRaps).length-1].title
+JSON.parse(SavedRaps)[JSON.parse(SavedRaps).length-1].beat // this is the hack
+JSON.parse(SavedRaps)[JSON.parse(SavedRaps).length-1].lyrics
+//not sure how I'm going to do it but I gotta use Parse on Saved Raps
+//Take the saved Raps --Save it to a storage called Saved Raps
+//for each in there, add that to the output!!!
+//
+//Take a break and finish tmrw
+//
+//A lot you wont remember but you;re like 98/100
+//now 99/100
+
+function updateRaps() {
+
+  SavedRaps= localStorage.getItem('saved');
+  Raps= JSON.parse(localStorage.getItem('saved'));
+   x.innerHTML = "";
+  for (var y in JSON.parse(SavedRaps)){
+  JSON.parse(SavedRaps)[y];
+    //x.innerHTML += "<br>Title: "+JSON.parse(SavedRaps)[y].title+"<br>Beat: "+JSON.parse(SavedRaps)[y].beat +"<br>Lyrics: " + JSON.parse(SavedRaps)[y].lyrics+"<br>";
+    console.log(y);
+  }
+  //dsgfdskjh
+}// experimentaldjk hdgdshghksgkjs sjghkjs dghkhds shgkjhasg
+function ClearAll(){
+  x.innerHTML = "";
+  localStorage.setItem('saved', "");
+  Raps =[];
+  //OPEN A MODAL THAT SAYS "are you sure!? The right answer is probably no. Press no unless you're just that good at rapping"
+}

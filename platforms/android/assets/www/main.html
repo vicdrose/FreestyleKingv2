@@ -228,24 +228,7 @@ Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">r
    </div>
       </span>
        </div>
-    
-    <br> <br>
-    <textarea rows="4" cols="40" width="70%" style="background-color: black" placeholder="Fillibustering flight attendants trying to figure out the best way to fly from here to Neptune without consuming jet fumes"></textarea>
-      <br>
-    <button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Save to Evernote</button>
-    
-    <br>
-    <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-              <br><br>
-              
-<br><br>
-
-            </div>
-        </div>
-        <div class="row">
+    <div class="row">
             <div class="col-md-12">
                     <h4><p id="quote"></p></h4>
                     <h5><p id="author"></p></h5>
@@ -259,6 +242,39 @@ Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">r
               <br>
                             </div>
             </div>
+    <br> <br>
+    <div>
+  <form method="post" name="postForm">
+    <label for="name">Bars: </label><br><br>
+ Title: <input rows="4" cols="50" type="text" name="title" id="title"  placeholder="title" style="color: black;"/><br>
+  Beat: <input rows="4" cols="50" type="text" name="beat" id="beat"  placeholder="beat" style="color: black;"/><br>
+  Lyrics: <!--<input rows="10" cols="50" type="text" name="lyrics" id="lyrics"  placeholder="lyrics"/>--> <textarea rows="4" cols="40" width="70%" id="lyrics" style="background-color: black" placeholder="Fillibustering flight attendants trying to figure out the best way to fly from here to Neptune without consuming jet fumes"></textarea>
+  <!--<input type="submit" value="Send">-->
+  <!--<button onclick="saveRap(document.getEkementById('title'),document.getEkementById('beat'),document.getEkementById('Lyrics'))">Go</button>-->
+</form>
+<br>
+<button onclick="saveRap()">Go</button>
+<button onclick="Clear()">Clear Input </button>
+<br><br>
+<div id="output" class="well">Raps will live here</div>
+<br><br>
+<button onclick=ClearAll()>Clear All Raps</button>
+  </div>
+    
+      <br>
+<!--    <button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Save to Evernote</button>-->
+    
+    <br>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <br><br>
+              
+<br><br>
+
+            </div>
+        </div>
         </div>
     </div>
 </body>
@@ -475,8 +491,12 @@ trope: A term often used to denote figures of speech in which words are used in 
 </div>
   <div class="Soundcloud" id="Soundcloud" style="display:none">
     <!-- End of body section HTML codes -->
-   <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe><br>
-   <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/309577920&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+    <div id="soundcloud_player">
+  <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" width=100% height=470px></iframe>
+  <!--<iframe width="50%" height="450" scrolling="no" frameborder="no" src="audioplayer.html"></iframe>-->
+  
+</div>
+   <!--<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/309577920&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>-->
    <br><button class="btn btn-top" onclick="document.getElementById('id03').style.display='block'" style="color: #000;
   background-color: Aquamarine; text-shadow: 1px 1px #FFF"> More Beats</button>
    <!-- The Modal3 -->
@@ -514,9 +534,8 @@ trope: A term often used to denote figures of speech in which words are used in 
   </div>
 <p>©2017 Transparency Interactive</p>
   <script src='js/jquery-3.2.1.js'></script>
-
-
-    <script src="js/index.js"></script>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script src="js/index.js"></script>
 <script>
 function onDeviceReady() {
       document.removeEventListener('deviceready', onDeviceReady, false);
