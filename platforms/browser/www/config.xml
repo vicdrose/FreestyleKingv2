@@ -17,5 +17,4 @@
     <allow-navigation href="*" />
     <content src="index.html" />
     <access origin="*" />
-    <gap:plugin name="phonegap-admob" source="npm" />
 </widget>

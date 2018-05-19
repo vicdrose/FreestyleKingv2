@@ -22,5 +22,45 @@
     },
     "is_top_level": false,
     "variables": {}
+  },
+  "cordova-plugin-admob-free": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-admob-free"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-promise-polyfill": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-promise-polyfill@~0.0.2"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-admob-sdk": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-admob-sdk@~0.16.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "phonegap-admob": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-admob@^4.1.15"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-google-play-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-google-play-services"
+    },
+    "is_top_level": false,
+    "variables": {}
   }
 }

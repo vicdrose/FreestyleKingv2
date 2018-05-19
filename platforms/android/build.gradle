@@ -253,7 +253,15 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
+    debugCompile(project(path: "cordova-google-play-services:google-play-services_lib", configuration: "debug")){
+        exclude module:("CordovaLib")
+    }
+    releaseCompile(project(path: "cordova-google-play-services:google-play-services_lib", configuration: "release")){
+        exclude module:("CordovaLib")
+    }
     compile "com.google.android.gms:play-services-ads:+"
+    compile "com.google.android.gms:play-services-base:11.0.4"
+    compile "com.google.android.gms:play-services-ads:11.0.4"
     // SUB-PROJECT DEPENDENCIES END
 }
 

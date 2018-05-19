@@ -12,10 +12,24 @@
     },
     "cordova-admob": {
       "PACKAGE_NAME": "com.transparencyinteractive.freestyleking"
+    },
+    "cordova-plugin-admob-free": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.transparencyinteractive.freestyleking"
     }
   },
   "dependent_plugins": {
     "cordova-connectivity-monitor": {
+      "PACKAGE_NAME": "com.transparencyinteractive.freestyleking"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.transparencyinteractive.freestyleking"
+    },
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.transparencyinteractive.freestyleking"
+    },
+    "cordova-google-play-services": {
       "PACKAGE_NAME": "com.transparencyinteractive.freestyleking"
     }
   }

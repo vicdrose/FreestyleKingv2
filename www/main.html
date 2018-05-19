@@ -19,7 +19,7 @@
   <div class="yellow-box">
 
    <button class="btn top-bar" style="text-align:left" onclick="MainMenu()">MAIN MENU</button>
-   <button class="btn top-bar" onclick="Songs()">BEAT STORE</button>
+   <button class="btn top-bar" onclick="Songs()">BEATS</button>
    <!-- Button to open the modal login form -->
    <button class="btn btn-top" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="document.getElementById('login').style.display='block'">Login</button>
 
@@ -60,10 +60,10 @@
 
 
   <div id="menu" class="main-menu btn-group-vertical">
-   <button class='btn btn-black' onclick="Start()">Start</button>
-   <button class='btn btn-black' onclick="Classic()">Classic</button>
+   <button class='btn btn-black' onclick="Classic()">Notepad</button>
    <button class='btn btn-black' onclick="Advanced()">Quickplay</button>
    <button class='btn btn-black' onclick="Build()">Advanced</button>
+   <button class='btn btn-black' onclick="Start()">Training</button>
    <button class='btn btn-black' onclick="Random()">Random</button>
    <button class='btn btn-black' onclick="Extras()">Extras</button>
    
@@ -315,7 +315,7 @@ Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">r
 </div>
   <div class="about" id="about" style="display:none">
    <p style="text-align:center">Rapper app to increase vocabulary<br/>Designed and developed by VICTOR ROSE<br/><a href="http://34.227.150.25"><img onclick="home()" style="height:70px;" src="logo2.png"></a><br>http://34.227.150.25<br/>http://34.227.150.25/freestyleking</p><br>
-   I am a young Black (read: mixed) male and I made this app myself to push the culture radically forward, enjoy<br>High vibrational raps and eleated mental capacity, improved communication skills along with a fun <br>and educational exercise in the admiration of hip hop culture.<br><br>
+   I am a solo developer and I made this app myself to push the culture radically forward, enjoy<br>High vibrational raps and eleated mental capacity, improved communication skills along with a fun <br>and educational exercise in the admiration of hip hop culture.<br><br>
      <div class="donate">
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
      <input type="hidden" name="cmd" value="_s-xclick">
@@ -494,6 +494,8 @@ trope: A term often used to denote figures of speech in which words are used in 
   <div class="Soundcloud" id="Soundcloud" style="display:none">
     <!-- End of body section HTML codes -->
     <div id="soundcloud_player">
+          Exclusive Beats (only found here and<a href="http://34.227.150.25"> Transparency Interactive</a>)<br>
+
       <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=3883771808/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://victorrose.bandcamp.com/album/freestyle-king-beats-1">Freestyle King Beats 1 by Victor Rose</a></iframe> 
   <!--<iframe width="50%" height="450" scrolling="no" frameborder="no" src="audioplayer.html"></iframe>-->
   
@@ -514,7 +516,6 @@ trope: A term often used to denote figures of speech in which words are used in 
 
      <div class="container">
       <!-- <input id="input3" type="text" style="background-color: black; color: white;" placeholder="ex. Tre"><button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="searchbeats()">Search</button>-->
-     FreestyleKing Exclusive Beats (only found here and Transparency Interactive http://34.227.150.25)
        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" width=100% height=470px></iframe>
 
     <!--end listen on repeat-->
@@ -558,28 +559,32 @@ trope: A term often used to denote figures of speech in which words are used in 
   <script src="https://w.soundcloud.com/player/api.js"></script>
   <script src="js/index.js"></script>
 <script>
-function onDeviceReady() {
+  function onDeviceReady() {
+  
       document.removeEventListener('deviceready', onDeviceReady, false);
       
       // Set AdMobAds options: 
-      admob.setOptions({
+     window.admob.setOptions({
         publisherId:          "pub-0137702917028406",  // Required 
         interstitialAdId:     "ca-app-pub-0137702917028406/9181679045",  // Optional 
         banner:               "ca-app-pub-0137702917028406/8301564412"
-      /*  tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional 
+       tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional 
         tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional 
-        tappxShare:           0.5                                        // Optional */
+        tappxShare:           0.5                                        // Optional
       });
       
       // Start showing banners (atomatic when autoShowBanner is set to true) 
-      admob.createBannerView();
+      window.admob.createBannerView();
       
       // Request interstitial (will present automatically when autoShowInterstitial is set to true) 
-      admob.requestInterstitialAd();
+      window.admob.requestInterstitialAd();
     }
     
     document.addEventListener("deviceready", onDeviceReady, false);
-   </script>
+    
+    window.admob.createBannerView({publisherId: "pub-0137702917028406"});
+
+</script>
 
 </body>
 </html>
