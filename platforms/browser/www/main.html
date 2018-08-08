@@ -15,13 +15,14 @@
 
 <body>
 
-   <div class="app">
-  <div class="yellow-box">
+<div class="yellow-box">
 
    <button class="btn top-bar" style="text-align:left" onclick="MainMenu()">MAIN MENU</button>
-   <button class="btn top-bar" onclick="Songs()">BEATS</button>
+   <button class="btn top-bar" onclick="Beats()">BEATS</button>
+     <button class="btn top-bar" onclick="Music()">MUSIC</button>
+
    <!-- Button to open the modal login form -->
-   <button class="btn btn-top" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="document.getElementById('login').style.display='block'">Login</button>
+   <button class="btn btn-top" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="document.getElementById('login').style.display='block'"><s>Login</s></button>
 
    <!-- The Modal -->
    <div id="login" class="modal">
@@ -33,15 +34,12 @@
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
      </div>
 
-     <div class="container">
-      <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
       <button type="submit">Login</button>
       <input type="checkbox" checked="checked"> Remember me
-     </div>
 
      <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
@@ -52,146 +50,190 @@
    </div>
 
   </div>
+<h1>Freestyle King&trade;</h1>
+
+<div id="menu" class="main-menu btn-group-vertical" style="display: block;">
+  
+ <div class="logo">
+      <img class="logo" src='logo.png'></img>
+    </div>
+
+
+      <button class='btn btn-black' onclick="Start()">Freestyle</button>
+      <button class='btn btn-black' onclick="Notebook()">Notebook</button>
+      <button class='btn btn-black' onclick="Extras()">Extras</button>
+<button class='btn btn-black'><a href="http://34.227.150.25/shop">Store</a></button>
+<button class='btn btn-black' onclick="About()">Support </button>
+    <br>
+      <!--<button class='btn btn-black' onclick="About()">About</button>-->
+    <br>
+  
+     <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>
+  </div>
+
+<div class="extra" id="extra" style="display:none">
+  <div class="logo">
+      <img class="logo" src='logo.png'></img>
+    </div>
+   <button class='btn btn-black' onclick="Glossary()">Glossary</button>
+    <button class='btn btn-black' onclick="Positive()">Positive Affirmations</button>
+      </div>
+
+<div id='start' style="display:none;">
+
+<!--  <div id="logo">
+   <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
+  </div>-->
+<!---->
+
+<br>
+<h4>Random</h4>
+<button onclick=roll()>Compound Word</button>
+<button onclick=rollCommon()> Common Word</button><br>
+<button onclick=rollAdj()>Adjective</button>
+<button onclick=rollAdv()>Adverb</button>
+  <button onclick=rollVerbs()>Verbs</button><br>
+<button onclick=rollCeleb()>Celebrity</button>
+<button onclick=rollAth()>Athlete</button>
+<button onclick=rollMov()>Movie</button>
+
+<!--<div class="dropdown">
+  <button class="dropbtn" onclick=roll()>Random Compound Word [v]</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>-->
+<br><br>
+<h5>Result</h5>
+<h1 id='result'></h1>
+<br>
+
+<!--<div class='row' width='100%'>
+  <div class='lg-col-4'>-->
+<!-- Button to open the modal login form 
+   <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block'" style="color: #000;
+  background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
+</div>
+<div class='lg-col-4'>-->
+<button onclick=randomA()>-A-</button><button onclick=randomE()>-E-</button><button onclick=randomI()> -I- </button><button onclick=randomO()> -O- </button><button onclick=randomU()> -U- </button><br><button onclick=randomah()>Ah</button><button onclick=randomeh()>eh</button><button onclick=randomih()>ih</button><button onclick=randomowh()>owh</button><button onclick=randomuh()>uh</button>
+  <br><br>
+    <!-- Trigger/Open The Modal -->
+<button id="relationshipBtn">Relationship</button>
+
+<!-- The Modal -->
+<div id="relationshipModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+<div class='row' width='100%'>
+  <div class='lg-col-4'>
+<div class='well'>Rhymes</div>
+  <div class='well' id='rhyres'>Results</div>
+</div>
+    <div class='lg-col-4'>
+<div class='well'>Sounds Like</div>
+  <div class='well' id='slres'>Results</div>
+</div>
+<div class='lg-col-4'>
+<div class='well'>Synonyms</div>
+<div class='well' id='synres'>Results</div>
+</div>
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+</div>
+</div>
+
+
+<button onclick=#><s>Suggestions</s></button>
+  <button onclick=#><s>Translations</s></button>
+<!--</div>-->
+ <!--<div class='lg-col-4'>
+ <button class="btn btn-top" onclick="document.getElementById('id02').style.display='block'" style="color: #000;
+  background-color: Aquamarine; text-shadow: 1px 1px #FFF">Ends with</button>
+  </div>
+</div>
+-->
+
+<br><br>
+ <!-- <div style="color:white">
+<p id="quote" ></p></h4>
+                    <h5><p id="author"></p></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><button class="button1" id="quoteBtn" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Random Quote</button></li>
+                        <li class="list-inline-item"><button class="button2" id="shareQuote" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Share Quote</button></li></div>-->
+<!-- Trigger/Open The Modal -->
+  
+<button id="quptalbtn">Show Quote</button>
+<br><br><br>
+  <iframe src="https://player.twitch.tv/?channel=xmastervic" frameborder="0" allowfullscreen="true" scrolling="no" height="auto" width="auto"></iframe>
+  <!--<div class='row' width='100%'>
+  <div class='lg-col-4'>
+<div class='well'>Rhymes</div>
+  <div class='well' id='rhyres'>Results</div>
+</div>
+    <div class='lg-col-4'>
+<div class='well'>Sounds Like</div>
+  <div class='well' id='slres'>Results</div>
+</div>
+<div class='lg-col-4'>
+<div class='well'>Synonyms</div>
+<div class='well' id='synres'>Results</div>
+</div>-->
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+<!-- The Modal -->
+
+<div id="quotal" class="quotal" style="display:none;">
+
+  <!-- Modal content -->
+
+  <div class="quotal-content" >
+    <span class="close2">x</span>
+
+    <h1>Freestyle King</h1>
+<br>
   <div id="logo">
    <img class="logo" src='logo.png'></img>
   </div>
 
-  <h1>Freestyle King&trade;</h1>
 
+<div style="color:white">
+<p id="quote" ></p></h4>
+                    <h5><p id="author"></p></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><button class="button1" id="quoteBtn" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Random Quote</button></li>
+                        <li class="list-inline-item"><button class="button2" id="shareQuote" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Share Quote</button></li></div>
 
-  <div id="menu" class="main-menu btn-group-vertical">
-   <button class='btn btn-black' onclick="Classic()">Notepad</button>
-   <button class='btn btn-black' onclick="Advanced()">Quickplay</button>
-   <button class='btn btn-black' onclick="Build()">Advanced</button>
-   <button class='btn btn-black' onclick="Start()">Training</button>
-   <button class='btn btn-black' onclick="Random()">Random</button>
-   <button class='btn btn-black' onclick="Extras()">Extras</button>
-   
-
-
-
-
-   <!--<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>-->
-   <br>
- 
+  
   </div>
 
-  <div id="start" style="display:none;">
- <div id="Teach" style="display:none;"><div class="container-fluid">Teach<br><button style="color:black;" onclick="TeachRandom()">Random Prefix</button>
- 
-  <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block';" style="color: #000;
-  background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
+</div>
+<br><br>
 
    <!-- The Modal1 -->
    <div id="id01" class="modal">
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-    <!-- Modal Content -->
-    <span class="modal-content animate" >
-
-     <div class="container">
-     <iframe id="startwith" src="http://www.morewords.com/starts-with/leg/" height="400p" width="100%"></iframe>
-    <!--end modal-->
-   </div>
-     </span>
-      </div>
-     
-  
-  <br><br>
-<p style="text-align:center" id='word1'>prefix</p>
-<p style="text-align:center">type or say as many words that begin with the above</p>
-
-  <form onsubmit="return false">
-<input style="color:black;" id='input1'><button style="color:black;" type='submit' onclick=Add()>Add</button><button style="color:black;">Speak</button>
-    </form>
-    <input type="checkbox" id='randomcheck' name="random" value="random">Random after each entry if checked<br>
-  
-<br><br>
-</div>
-<div class="container-fluid">Results
-  <div class="well" id="results3" style="background-color:indigo;"></div>
-</div>
-
-  </div>
-<div id="Rap" style="display:none;">
-  Rap
-<br>
-<button onclick="RapRandom()" style="background-color: white; color: Black;">Random Word</button>
-<h1 id='word3'>result</h1>
-<br>
-<div class="container-fluid">Results
-  <div class="container-fluid well">
- <div class="row">
-Pivot<div class="col-lg-6 well" id='pivotwell' style="background-color:indigo;">pivot words will be here</div>
-Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">rhymes will be here</div>
-   </div>
-    </div>
-</div>
-</div>
-<br>
- <button id='rapbut' style="color:black;" onclick="rapbut()">Rap</button>
-<button id='teachbut' style="color:black;" onclick="teachbut()">Teach</button>
-
-</div>
-
-  <div class="classic" id="classic" style="display:none">
-<!--Wordbank Modal-->
-<button class="btn" onclick="document.getElementById('wb').style.display='block'" style="color: #000;
-  background-color: #7FFFBA; text-shadow: 1px 1px white;">Wordbank</button>
-<br>
-   <!-- The Modal -->
-   <div id="wb" class="modal">
-    <span onclick="document.getElementById('wb').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-    <!-- Modal Content -->
-    <span class="modal-content animate" >
-
-     <div class="container" style="background-color: #612126; border-style: solid;">
-   
-
-  <ul> Suggestions: <br>Try a word ladder. ex: Time, Out, Door, Knob.<br>Try a random quote for inspiration (below)</ul><br>
-      Enter topics<br>
-    <div class="WBleft">
-        <form onsubmit="return false">
-      <input id="input" float="left" type="text" style="background-color: black; color: white;" placeholder="ex. Fish"><button id="add" type="submit" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="AddWord()">Add</button><button id="random" type="submit" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="RandomWord()">Random</button>
-        </form>
-    </div>
-
-
-   <ul id="WordBank">WordBank.</ul>
-
-
-   <br>
-   <button onclick="Advanced()" style="display:none">Advanced</button>
-   <!-- Activates onclick for results -- modal pops up -->
-   <button onclick="SuperAdvanced()" style="display: none">Super Advanced</button>
-   <!-- Activates onclick for results -- modal pops up -->
-   <p align="center">Results</p>
-   <span id="advancedbtns" style="display:none">
-  <button onclick="Synonyms()">Synonyms</button>
-  <button onclick="Rhymes()">Rhymes</button>
-  <button onclick="SoundsLike()">Sounds Like</button>
-  <button onclick="Describes()">Describes</button>
-  <button onclick="DescribedBy()">Described By</button>
-  </span>
-   <div id='content' class='well' style="background-color: #39474F; border-style: solid;">Results</div>
-
-   <input type="radio" name="gender" value="male" id="rhy" checked> Rhyme
-   <input type="radio" name="gender" value="female" id="syn"> Synonym
-   <input type="radio" name="gender" value="other" id="sl" > Sounds Lke
-   <input type="radio" name="gender" value="other" id="des"> Describes
-   <input type="radio" name="gender" value="other" id="desby"> Described By
-  
-    <br> 
-    
-       </div></span></div><br>
-      <!-- Button to open the modal login form -->
-   <button class="btn btn-top" onclick="document.getElementById('id05').style.display='block'" style="color: #000;
-  background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
-
-   <!-- The Modal1 -->
-   <div id="id05" class="modal">
-    <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
     <span class="modal-content animate" >
@@ -204,8 +246,7 @@ Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">r
      </span>
       </div>
      
-      <button class="btn btn-top" onclick="document.getElementById('id02').style.display='block'" style="color: #000;
-  background-color: Aquamarine; text-shadow: 1px 1px #FFF">Ends with</button>
+     
 
    <!-- The Modal -->
    <div id="id02" class="modal">
@@ -213,132 +254,103 @@ Rhymes<div class="col-lg-6 well" id='rapwell' style="background-color:indigo;">r
 
     <!-- Modal Content -->
     <span class="modal-content animate">
-
      <div class="container">
        <input id="input2" type="text" style="background-color: black; color: white;" placeholder="ex. can"><button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="endswith()">Search</button><br>
      <iframe id="endswith" src="http://www.morewords.com/ends-with/can/" height="400p" width="100%"></iframe>
     <!--end more words-->
-   </div>
-      </span>
-       </div>
-    <div class="row">
-            <div class="col-md-12">
-                    <h4><p id="quote"></p></h4>
-                    <h5><p id="author"></p></h5>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><button class="button1" id="quoteBtn" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Random Quote</button></li>
-                        <li class="list-inline-item"><button class="button2" id="shareQuote" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Share Quote</button></li>
-                    <br><br>
-                    <!--Record Vocals <br>
-                      <iframe src="https://webaudiodemos.appspot.com/AudioRecorder/index.html"></iframe>-->
-                    </ul>
-              <br>
-                            </div>
-            </div>
-    <br> <br>
-    <div>
+   </div><!--<button>Ladder</button> idk what to do here-->
+</span>
+     </div>
+<!--<h4>Would be a good applewatch app</h4>
+<h4>Musixmatch Api would help me with lyrics just for fux</h4>-->
+<br><br><br>
+
+</div>
+
+<div id='Notebook' style="display:none;">
+  Notebook
+  
+
+<div>
   <form method="post" name="postForm">
     <label for="name">Bars: </label><br><br>
- Title: <input rows="4" cols="50" type="text" name="title" id="title"  placeholder="title" style="color: black;"/><br>
-  Beat: <input rows="4" cols="50" type="text" name="beat" id="beat"  placeholder="beat" style="color: black;"/><br>
-  Lyrics: <!--<input rows="10" cols="50" type="text" name="lyrics" id="lyrics"  placeholder="lyrics"/>--> <textarea rows="4" cols="40" width="70%" id="lyrics" style="background-color: black" placeholder="Fillibustering flight attendants trying to figure out the best way to fly from here to Neptune without consuming jet fumes"></textarea>
+ Title: <input rows="4" cols="50" type="text" name="title" id="title"  placeholder="title"/><br>
+  Beat: <input rows="4" cols="50" type="text" name="beat" id="beat"  placeholder="beat"/><br>
+  Lyrics: <textarea rows="5" cols="25" type="text" name="lyrics" id="lyrics"  placeholder="Filibustering flight attendants trying to figure out the best way to fly from here to neptune without consuming jet fumes"></textarea>
   <!--<input type="submit" value="Send">-->
   <!--<button onclick="saveRap(document.getEkementById('title'),document.getEkementById('beat'),document.getEkementById('Lyrics'))">Go</button>-->
 </form>
 <br>
 <button onclick="saveRap()">Go</button>
+<!--  <div id='texttospeech'>
+  <button id="start_button" onclick="startDictation(event)">Dictate</button>
+</div>
+   <div id="results">
+  <span id="final_span" class="final"></span>
+  <span id="interim_span" class="interim"></span>
+</div>
+ -->
 <button onclick="Clear()">Clear Input </button>
 <br><br>
 <div id="output" class="well">Raps will live here</div>
 <br><br>
-<button onclick=ClearAll()>Clear All Raps</button>
-  </div>
-    
-      <br>
-<!--    <button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Save to Evernote</button>-->
-    
-    <br>
-    <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-              <br><br>
-              
-<br><br>
+ 
+<button onclick=ClearAll()>Clear All Raps</button> 
+  </div> 
+</div>
+</div>
 
-            </div>
-        </div>
-        </div>
-    </div>
-</body>
 
-  </div>
 
-  <div class="extra" id="extra" style="display:none">
-    <button class='btn btn-black' onclick="Positive()">Positive</button>
-    <button class='btn btn-black' onclick="Glossary()">Glossary</button>
-   <button class='btn btn-black' onclick="Radio()">Radio</button>
-    <button class='btn btn-black' onclick="Resources()">Resources</button>
-   <button class='btn btn-black' onclick="Twitch()">Stream</button>
-   <button class='btn btn-black' onclick="About()">About</button>
-    
-    <br>
-    <a href="http://www.prefixsuffix.com/rootchart.php?navblks=1011000">Root Words</a>
-    <br>
-    <a href="https://en.wikipedia.org/wiki/Lists_of_bodies_of_water">List of Bodies of Water</a>
-    <br>
-    <a href="https://en.wikipedia.org/wiki/List_of_lakes">List of Lakes</a>
-    <br>
-    <a href="https://en.wikipedia.org/wiki/List_of_seas">List of Seas</a>
-    <br>
-    <a href="https://en.wikipedia.org/wiki/Lists_of_deities">List of Dieties</a>
-    <br>
-    <a href="https://en.wikipedia.org/wiki/List_of_mountain_ranges">List of Mountain Ranges</a>
-    <br>
-    <a href="#">Suggested Listens</a>
-    <br>
-    
-    <a href="https://en.wikipedia.org/wiki/List_of_lists_of_lists">More lists...</a>
+<div id="beats" style="display:none;">
+  <p>Exclusive Beats (only found here and <a href="http://34.227.150.25"> Transparency Interactive</a>)</p>
+<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=3883771808/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://victorrose.bandcamp.com/album/freestyle-king-beats-1">Freestyle King Beats 1 by Victor Rose</a></iframe>
+
+ <br>
+   <iframe width="50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
   
-    
   </div>
-<div class="random1" id="random1" style="display:none">
-  <iframe src="random-words/index.html" width="70%" height="100"></iframe><br>
-  <iframe src="random-movies/index.html" width="70%" height="100"></iframe><br>
-  <iframe src="random-celebs/index.html" width="70%" height="100"></iframe><br>
-  <iframe src="random-consonants/index.html" width="70%" height="100"></iframe><br>
-  <iframe src="random-vowels/index.html" width="70%" height="100"></iframe>
 
-</div>
-<div class="positive" id="positive" style="display:none">
-  <iframe src="positive/index.html" width="100%" height="400"></iframe>
-</div>
-  <div class="about" id="about" style="display:none">
-   <p style="text-align:center">Rapper app to increase vocabulary<br/>Designed and developed by VICTOR ROSE<br/><a href="http://34.227.150.25"><img onclick="home()" style="height:70px;" src="logo2.png"></a><br>http://34.227.150.25<br/>http://34.227.150.25/freestyleking</p><br>
-   I am a solo developer and I made this app myself to push the culture radically forward, enjoy<br>High vibrational raps and eleated mental capacity, improved communication skills along with a fun <br>and educational exercise in the admiration of hip hop culture.<br><br>
-     <div class="donate">
+
+<div id="music" style="display:none;">
+  <p>Some musical selections from DJ Young Thought of <a href="http://34.227.150.25">Transparency Interactive</a></p>
+    <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/2DPYGmNaNc2xvzfyD5lFOe" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  <iframe width="50%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434595507&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  
+  <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/549762105&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  
+<iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/572337723&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>  
+  
+  
+    <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/572411250&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+  <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/569744064&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  <br>
+  <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/2X1vU9J8izHeA5e1iXR0V8" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/1jR4k3LDhFQLNIyPzqWp4c" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+  <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/0ny7XPy01QQMeg0WjCcy4N" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  </div>
+
+<div class="about" id="about" style="display:none">
+   <p style="text-align:center">Rapper app to increase vocabulary<br/>Designed and developed by @VicRoseInfinite<br/><a href="http://vicdrose.com"><img onclick="home()" style="height:70px;" src="http://vicdrose.com/comingsoon/logo.png"><br></a>http://victordrose.com<br/>http://transparencyinteractive.com</br>http://freestylekingapp.com</p>
+   <br/>
+   <div class="donate">
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
      <input type="hidden" name="cmd" value="_s-xclick">
      <input type="hidden" name="hosted_button_id" value="T7P7GDA3KP4C8">
-     <input type="image" src="btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
    </div>
-   <br/>
-   <!--<div class="donate">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-     <input type="hidden" name="cmd" value="_s-xclick">
-     <input type="hidden" name="hosted_button_id" value="T7P7GDA3KP4C8">
-     <input type="image" src="btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-   </div>-->
+<br>
+<p>I am a solo developer and I made this app myself to push the culture radically forward, enjoy<br>high vibrational raps and eleated mental capacity, improved communication skills along with a fun <br>and educational exercise in the admiration of hip hop culture.<br><br> </p>
   </div>
 
-  <div class="YungThoth" id="YungThoth" style="display:none">
-   <!--<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/4676729&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>-->
-  </div>
-  <div class="glossary" id="glossary" style="display:none; text-align:left; width:80%; margin:50px">
+<div class="glossary" id="glossary" style="display:none; text-align:left; width:80%; margin:50px">
     Glossary<br><br>
         A <br><br><br>
 aesthetics: "Philosophical investigation into the nature of beauty and the perception of beauty, especially in the arts; the theory of art or artistic taste." (CB)
@@ -491,70 +503,10 @@ transition: the type of editing technique used to connect shots. Sometimes there
 trope: A term often used to denote figures of speech in which words are used in a sense different from their literal meaning. Distinguished from figures of speech based upon word order or sound pattern.
 <br><br>
 </div>
-  <div class="Soundcloud" id="Soundcloud" style="display:none">
-    <!-- End of body section HTML codes -->
-    <div id="soundcloud_player">
-          Exclusive Beats (only found here and<a href="http://34.227.150.25"> Transparency Interactive</a>)<br>
-
-      <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=3883771808/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://victorrose.bandcamp.com/album/freestyle-king-beats-1">Freestyle King Beats 1 by Victor Rose</a></iframe> 
-  <!--<iframe width="50%" height="450" scrolling="no" frameborder="no" src="audioplayer.html"></iframe>-->
-  
+<div class="positive" id="positive" style="display:none">
+  <iframe src="positive/index.html" width="100%" height="400"></iframe>
 </div>
-   <!--<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/309577920&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>-->
-   <br> <button class="btn btn-top" onclick="document.getElementById('id03').style.display='block'" style="color: #000;
-  background-color: Aquamarine; text-shadow: 1px 1px #FFF"> More Beats</button>
-  <br>
-   <br><button class="btn btn-top" onclick="document.getElementById('id04').style.display='block'" style="color: #000;
-  background-color: Aquamarine; text-shadow: 1px 1px #FFF"> Loop beats</button>
-
-   <!-- The Modal3 -->
-   <div id="id03" class="modal">
-    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-    <!-- Modal Content -->
-    <span class="modal-content animate">
-
-     <div class="container">
-      <!-- <input id="input3" type="text" style="background-color: black; color: white;" placeholder="ex. Tre"><button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="searchbeats()">Search</button>-->
-       <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" width=100% height=470px></iframe>
-
-    <!--end listen on repeat-->
-   </div>
-      </span>
-       </div>
-       <div id="id04" class="modal">
-    <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-    <!-- Modal Content -->
-    <span class="modal-content animate">
-
-     <div class="container">
-      <!-- <input id="input3" type="text" style="background-color: black; color: white;" placeholder="ex. Tre"><button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="searchbeats()">Search</button>-->
-     Choose a vibe: Trap, LoFi, 90s, Trippy, Turnt
-<iframe src="https://listenonrepeat.com/" height="600p" width="100%"></iframe>  
-    <!--end listen on repeat-->
-   </div>
-      </span>
-       </div>
-  </div>
-
-  <div class="Build" id="Build" style="display:none">
-    <!-- End of body section HTML codes -->
-   <iframe width="100%" height="1000px" scrolling="yes" frameborder="no" src="freestyleking-vwhoa/index.html"></iframe>
-  </div>
-<div class="advanced" id="advanced" style="display:none">
-    <!-- End of body section HTML codes -->
-   <iframe width="100%" height="1000px" scrolling="yes" frameborder="no" src="freestyleking-vjohn/index.html"></iframe>
-  </div>
-  <div id="twitch" class="Twitch" style="display: none">
-   <iframe src="https://player.twitch.tv/?channel=xmastervic" frameborder="0" allowfullscreen="true" scrolling="no" height="auto" width="auto"></iframe><a href="https://www.twitch.tv/xmastervic?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from xmastervic on www.twitch.tv</a>
-  </div>
-
- </div>
-<div id="radio" style="display:none;"><div id="footer"><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Adylanblack72%3Aplaylist%3A0ny7XPy01QQMeg0WjCcy4N" width="50%" height="80" frameborder="0" allowtransparency="true"></iframe><br><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Adylanblack72%3Aplaylist%3A1ffLSvxvD0QNgmX6s17Vmf" width="50%" height="380" frameborder="0" allowtransparency="true"></iframe></div>
-    
-  </div>
-<p>©2017 Transparency Interactive</p>
+<p class='footer'>©2017 Transparency Interactive</p>
   <script src='js/jquery-3.2.1.js'></script>
   <script src="https://w.soundcloud.com/player/api.js"></script>
   <script src="js/index.js"></script>
