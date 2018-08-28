@@ -1,12 +1,583 @@
-<!doctype html>
-<html>
-  <head>
-   <title>tittle</title>
-   <script>
-     window.location='./main.html';
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Whatitdodoo v3 phone-v</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="yellow-box">
+
+   <button class="btn top-bar" style="text-align:left" onclick="MainMenu()">MAIN MENU</button>
+   <button class="btn top-bar" onclick="Beats()">BEATS</button>
+     <button class="btn top-bar" onclick="Music()">MUSIC</button>
+
+   <!-- Button to open the modal login form -->
+   <button class="btn btn-top" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="document.getElementById('login').style.display='block'"><s>Login</s></button>
+
+   <!-- The Modal -->
+   <div id="login" class="modal">
+    <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php">
+     <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+     </div>
+
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+
+     <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+     </div>
+    </form>
+    <!--end login-->
+   </div>
+
+  </div>
+<h1>Freestyle King&trade;</h1>
+
+<div id="menu" class="main-menu btn-group-vertical" style="display: block;">
+  
+ <div class="logo">
+      <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
+    </div>
+
+
+      <button class='btn btn-black' onclick="Start()">Freestyle</button>
+      <button class='btn btn-black' onclick="Notebook()">Notebook</button>
+      <button class='btn btn-black' onclick="Extras()">Extras</button>
+<button class='btn btn-black'><a href="window.open('http://34.227.150.25/shop','_self')">Store</a></button>
+<button class='btn btn-black' onclick="About()">Support </button>
+    <br><br>
+      <!--<button class='btn btn-black' onclick="About()">About</button>-->
+  
+     <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>
+  </div>
+
+<div class="extra" id="extra" style="display:none">
+  <div class="logo">
+      <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
+    </div>
+   <button class='btn btn-black' onclick="Glossary()">Glossary</button>
+		<button class='btn btn-black' onclick="Positive()">Positive Affirmations</button>
+<button class='btn btn-black' onclick="Meditation()">Meditation</button>
+<br><br>
+  <iframe src="https://player.twitch.tv/?channel=xmastervic" frameborder="0" allowfullscreen="true" scrolling="no" height="auto" width="auto"></iframe>
+
+		  </div>
+
+<div id='start' style="display:none;">
+
+<!--  <div id="logo">
+   <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
+  </div>-->
+<!---->
+
+<br>
+<h4>Random</h4>
+<button onclick=roll()>Compound Word</button>
+<button onclick=rollCommon()> Common Word</button><br>
+<button onclick=rollAdj()>Adjective</button>
+<button onclick=rollAdv()>Adverb</button>
+  <button onclick=rollVerbs()>Verbs</button><br>
+<button onclick=rollCeleb()>Celebrity</button>
+<button onclick=rollAth()>Athlete</button>
+<button onclick=rollMov()>Movie</button>
+
+<!--<div class="dropdown">
+  <button class="dropbtn" onclick=roll()>Random Compound Word [v]</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>-->
+<br><br>
+<h5>Result</h5>
+<h1 id='result'></h1>
+<br>
+
+<!--<div class='row' width='100%'>
+  <div class='lg-col-4'>-->
+<!-- Button to open the modal login form 
+   <button class="btn btn-top" onclick="document.getElementById('id01').style.display='block'" style="color: #000;
+	background-color: Aquamarine; text-shadow: 1px 1px #FFF">Begins with</button>
+</div>
+<div class='lg-col-4'>-->
+<button onclick=randomA()>-A-</button><button onclick=randomE()>-E-</button><button onclick=randomI()> -I- </button><button onclick=randomO()> -O- </button><button onclick=randomU()> -U- </button><br><button onclick=randomah()>Ah</button><button onclick=randomeh()>eh</button><button onclick=randomih()>ih</button><button onclick=randomowh()>owh</button><button onclick=randomuh()>uh</button>
+  <br><br>
+    <!-- Trigger/Open The Modal -->
+<button id="relationshipBtn">Rhymes</button>
+<button id="slBtn">Sounds like</button>
+<button id="synBtn">Synonyms</button>
+
+
+<!-- The Modal -->
+<div id="relationshipModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content relationshipresults">
+    <span class="close1">&times;</span>
+<div class='row' width='100%'>
+  <div class='lg-col-4'>
+<div class='well'>Rhymes</div>
+  <div class='well' id='rhyres'>Results</div>
+</div>
+
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+</div>
+</div>
+  
+  <div id="slModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content slResults">
+    <span class="close2">&times;</span>
+<div class='row' width='100%'>
+
+    <div class='lg-col-4'>
+<div class='well'>Sounds Like</div>
+  <div class='well' id='slres'>Results</div>
+</div>
+
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+</div>
+</div>
+  
+  <div id="synModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content synBtn">
+    <span class="close3">&times;</span>
+<div class='row' width='100%'>
+
+<div class='lg-col-4'>
+<div class='well'>Synonyms</div>
+<div class='well' id='synres'>Results</div>
+</div>
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+</div>
+</div>
+  
+  
+
+<br>
+<button onclick=#><s>Suggestions</s></button>
+  <button onclick=#><s>Translations</s></button>
+<!--</div>-->
+ <!--<div class='lg-col-4'>
+ <button class="btn btn-top" onclick="document.getElementById('id02').style.display='block'" style="color: #000;
+	background-color: Aquamarine; text-shadow: 1px 1px #FFF">Ends with</button>
+  </div>
+</div>
+-->
+
+<br><br>
+ <!-- <div style="color:white">
+<p id="quote" ></p></h4>
+                    <h5><p id="author"></p></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><button class="button1" id="quoteBtn" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Random Quote</button></li>
+                        <li class="list-inline-item"><button class="button2" id="shareQuote" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Share Quote</button></li></div>-->
+<!-- Trigger/Open The Modal -->
+  
+<button id="quptalbtn">Show Quote</button>
+<br><br><br>
+  <!--<div class='row' width='100%'>
+  <div class='lg-col-4'>
+<div class='well'>Rhymes</div>
+  <div class='well' id='rhyres'>Results</div>
+</div>
+    <div class='lg-col-4'>
+<div class='well'>Sounds Like</div>
+  <div class='well' id='slres'>Results</div>
+</div>
+<div class='lg-col-4'>
+<div class='well'>Synonyms</div>
+<div class='well' id='synres'>Results</div>
+</div>-->
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+<!-- The Modal -->
+
+<div id="quotal" class="quotal" style="display:none;">
+
+  <!-- Modal content -->
+
+  <div class="quotal-content" >
+    <span class="close4">x</span>
+
+    <h1>Freestyle King</h1>
+<br>
+  <div id="logo">
+   <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
+  </div>
+
+
+<div style="color:white">
+<p id="quote" ></p></h4>
+                    <h5><p id="author"></p></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><button class="button1" id="quoteBtn" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Random Quote</button></li>
+                        <li class="list-inline-item"><button class="button2" id="shareQuote" style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;">Share Quote</button></li></div>
+
+  
+  </div>
+
+</div>
+<br><br>
+
+   <!-- The Modal1 -->
+   <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <span class="modal-content animate" >
+
+     <div class="container">
+       <input id="input1" type="text" style="background-color: black; color: white;" placeholder="ex. Tre"><button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="startswith()">Search</button><br>
+     <iframe id="startwith" src="http://www.morewords.com/starts-with/leg/" height="400p" width="100%"></iframe>
+    <!--end modal-->
+   </div>
+     </span>
+      </div>
      
-   </script>
-   
-  <body>
-  </body>
+     
+
+   <!-- The Modal -->
+   <div id="id02" class="modal">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    <!-- Modal Content -->
+    <span class="modal-content animate">
+     <div class="container">
+       <input id="input2" type="text" style="background-color: black; color: white;" placeholder="ex. can"><button style="background-color: white; color: Black; text-shadow: 1px 1px 2px #ffce00;" onclick="endswith()">Search</button><br>
+     <iframe id="endswith" src="http://www.morewords.com/ends-with/can/" height="400p" width="100%"></iframe>
+    <!--end more words-->
+   </div><!--<button>Ladder</button> idk what to do here-->
+</span>
+     </div>
+<!--<h4>Would be a good applewatch app</h4>
+<h4>Musixmatch Api would help me with lyrics just for fux</h4>-->
+<br><br><br>
+
+</div>
+
+<div id='Notebook' style="display:none;">
+  Notebook
+  
+
+<div>
+  <form method="post" name="postForm">
+    <label for="name">Bars: </label><br><br>
+ Title: <input rows="4" cols="50" type="text" name="title" id="title"  placeholder="title"/><br>
+  Beat: <input rows="4" cols="50" type="text" name="beat" id="beat"  placeholder="beat"/><br>
+  Lyrics: <textarea rows="5" cols="25" type="text" name="lyrics" id="lyrics"  placeholder="Filibustering flight attendants trying to figure out the best way to fly from here to neptune without consuming jet fumes"></textarea>
+  <!--<input type="submit" value="Send">-->
+  <!--<button onclick="saveRap(document.getEkementById('title'),document.getEkementById('beat'),document.getEkementById('Lyrics'))">Go</button>-->
+</form>
+<br>
+<button onclick="saveRap()">Go</button>
+<!--  <div id='texttospeech'>
+  <button id="start_button" onclick="startDictation(event)">Dictate</button>
+</div>
+   <div id="results">
+  <span id="final_span" class="final"></span>
+  <span id="interim_span" class="interim"></span>
+</div>
+ -->
+<button onclick="Clear()">Clear Input </button>
+<br><br>
+<div id="output" class="well">Raps will live here</div>
+<br><br>
+ 
+<button onclick=ClearAll()>Clear All Raps</button> 
+  </div> 
+</div>
+</div>
+
+
+
+<div id="beats" style="display:none;">
+  <p>Exclusive Beats (only found here and <a href="http://34.227.150.25"> Transparency Interactive</a>)</p>
+<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=3883771808/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://victorrose.bandcamp.com/album/freestyle-king-beats-1">Freestyle King Beats 1 by Victor Rose</a></iframe>
+
+ <br>
+   <iframe width="50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+  
+  <br>
+  
+  <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXc8kgYqQLMfH" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX3qCx5yEZkcJ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+
+
+<div id="music" style="display:none;">
+  <p>Some musical selections from DJ Young Thought of <a href="http://34.227.150.25">Transparency Interactive</a></p>
+    <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/2DPYGmNaNc2xvzfyD5lFOe" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  <iframe width="50%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434595507&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  
+  <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/549762105&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  
+<iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/572337723&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>  
+  
+  
+    <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/572411250&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+  <iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/569744064&color=%23a899d1&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  <br>
+  <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/2X1vU9J8izHeA5e1iXR0V8" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/1jR4k3LDhFQLNIyPzqWp4c" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+  <iframe src="https://open.spotify.com/embed/user/dylanblack72/playlist/0ny7XPy01QQMeg0WjCcy4N" width="50%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  </div>
+
+<div class="about" id="about" style="display:none">
+   <p style="text-align:center">Rapper app to increase vocabulary<br/>Designed and developed by @VicRoseInfinite<br/><a href="http://vicdrose.com"><img onclick="home()" style="height:70px;" src="http://vicdrose.com/comingsoon/logo.png"><br></a>http://victordrose.com<br/>http://transparencyinteractive.com</br>http://freestylekingapp.com</p>
+   <br/>
+   <div class="donate">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+     <input type="hidden" name="cmd" value="_s-xclick">
+     <input type="hidden" name="hosted_button_id" value="T7P7GDA3KP4C8">
+     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+   </div>
+<br>
+<p>I am a solo developer and I made this app myself to push the culture radically forward, enjoy<br>high vibrational raps and eleated mental capacity, improved communication skills along with a fun <br>and educational exercise in the admiration of hip hop culture.<br><br> </p>
+  </div>
+
+<div class="glossary" id="glossary" style="display:none; text-align:left; width:80%; margin:50px">
+    Glossary<br><br>
+        A <br><br><br>
+aesthetics: "Philosophical investigation into the nature of beauty and the perception of beauty, especially in the arts; the theory of art or artistic taste." (CB)
+<br><br>
+allegory: "A story or visual image with a second distinct meaning partially hidden behind its literal or visible meaning. In written narrative, allegory involves a continuous parallel between two (or more) levels of meaning in a story, so that its persons and events correspond to their equivalents in a system of ideas or a chain of events external to the tale." (CB)
+<br><br>
+allusion: "An indirect or passing reference to some event, person, place, or artistic work, the nature and relevance of which is not explained by the writer but relies on the reader’s familiarity with what is thus mentioned. The technique of allusion is an economical means of calling upon the history or the literary tradition that author and reader are assumed to share. . . ." (CB)
+<br><br>
+ambiguity: "Openness to different interpretations: or an instance in which some use of language may be understood in diverse ways." Defended by modern literary critics as "a source of poetic richness rather than a fault of imprecision." (CB)
+<br><br>
+anti-hero: A central figure in a work that repels us by his or her actions or morality, yet who is not a villain. The Anti-hero accomplishes a useful purpose or even does heroic deeds. Max of The Road Warrior epitomizes the 1970-80s anti-hero.
+<br><br>
+archetype: A term from Jungian psychology that has been applied to literature. Jung meant the symbolic figure of myth and legend, or even a racial memory that we carry in a "collective unconscious." Archetypes embody an entire type of character from many cultures. Thus Hercules is an archetypal flawed hero, Odysseus or the Native-American Coyote are archetypal trickster figures. In literature and film the term can be more broadly applied, so we have the suffering mother of sentimental fiction, the greedy landlord of stage and film, the doomed private writing a letter home the night before the D-Day invasion, and the kind-hearted "tough guy" in many works.
+<br><br>
+B 
+<br><br>
+black comedy: a subgenre of humor that uses cruelty or terrible situations to make the reader or viewer laugh, sometimes uncomfortably. Some Social-Darwinist works (Frank Norris' best known novel, McTeague) are also black comedies.
+
+C <br><br><br>
+camera movement: cameras can remain stationary and move side to side (a pan), up and down (a tilt). It can move along on a vehicle or set of tracks straight backward or forward (a track or tracking shot). The camera can be carried for a wobbly (but often powerful) handheld shot.
+<br><br>
+canon: A body of works considered authentic (as in the body of works actually written by a particular author) or considered by a particular culture or subculture to be central to its cultural identity.
+<br><br>
+catharsis: A process in which a character heals, though often the process is painful. It can be a process for the audience of a work, as well.
+<br><br>
+connotation: "The emotional implications and associations that words may carry, as distinguished from their denotative meanings." (HH)
+<br><br>
+convention: "An established practice—whether in technique, style, structure, or subject matter—commonly adopted in literary works by customary and implicit agreement or precedent rather than by natural necessity." (CB)
+<br><br>
+cyberpunk: genre of science fiction pioneered by William Gibson and a few others in the 1980s; Gibson first coined the term "cyberspace." In these texts and films, humans have begun to merge with computer technology and the future is generally dark as major corporations replace governments as oppressive power-brokers. Life is usually short and uncertain with huge gaps between a small corporate elite and the gangs, the poor, and the insane who make up the bulk of the population. Cyberpunk protagonists are often cynical rebels--punks, mercenaries, hackers, spies, and nomads--who work outside the system and the "suits" who run it.
+<br><br>
+D <br><br><br>
+denotation: The basic dictionary meaning of a word, as opposed to its connotative meaning.
+<br><br>
+denouement: The "end game" of a work of fiction. More than "how the plot comes out," the denouement (a French term using French pronunciation) suggests the ways in which several plot elements work out toward the end of a text or film.
+<br><br>
+determinism/deterministic: the quality of a narrative or character that leads only to a single conclusion. We know, for example, that certain characters are doomed to fail, whatever they do.
+<br><br>
+deus ex machina: The way of closing a story with an off-stage character who suddenly appears to bring about the denouement. This approach to ending a tale has its origins in ancient Greek theater, where an actor in the role of a god might suddenly appear on stage to help bring about the ending of the performance.
+<br><br>
+diction: Literary word choice.
+<br><br>
+didactic: A work "designed to impart information, advice, or some doctrine of morality or philosophy." (CB)
+<br><br>
+discourse: "[A]s a free-standing noun (discourse as such) the term denotes language in actual use within its social and ideological contexts and in institutionalized representations of the world called discursive practices." (CB) Literary works may contain or make use of any number of discourses. Literary language may itself be considered a kind of discourse.
+<br><br>
+dystopia/utopia: A fictional world so oppressive that it might be a nightmare for someone from our society. Examples of dystopian fiction would be Orwell's 1984. Some post-apocalyptic worlds (see below) are dystopias, but the usual feature of most dystopian fiction and film is that some type of society, however awful, still exists. A utopian world is exactly the opposite--a paradise of some sort. The eternal bliss of the biblical Garden of Eden and the perfect technological future predicted at the 1939 World's Fair in the film The World of Tomorrow are both utopian.
+<br><br>
+E <br><br><br>
+exegesis: the art of close reading in order to interpret a text. We often utilize this technique for poetry, but for fiction it works as well to tease out the effect of certain words or phrases, uses of repetition, references to earlier events in the text, or hints about what is to come.
+<br><br>
+F <br><br><br>
+fatal flaw: a character trait that leads to tragedy, both in characters who are otherwise quite admirable and in terrible villains. Examples include King Lear's blind trust in his daughters, Eve's desire for knowledge, Ahab's thirst for revenge, Darth Vader's will to power, or Pandora's curiosity.
+<br><br>
+figure of speech: "An expression that departs from the accepted literal sense or from the normal order of words, or in which an emphasis is produced by patterns of sound." (CB)
+<br><br>
+form: As a critical term, form "can refer to a genre. . ., or to an established pattern of poetic devices. . ., or, more abstractly, to the structure or unifying principle of design in a given work. . . When speaking of a work’s formal properties, critics usually refer to its structural design and patterning, or sometimes to its style and manner in a wider sense as distinct from its content." (CB)
+<br><br>
+G 
+<br><br><br>
+genre: "The French term for a type, species, or class of composition. A literary genre is a recognizable and established category of written work employing such common conventions as will prevent readers or audiences from mistaking it [with] another kind." (CB) Genre as a term is distinguished from mode in its greater specificity as to form and convention.
+<br><br>
+H 
+<br><br><br>
+hard-boiled: a tone of writing for fiction and film often associated with American detective fiction by Raymond Chandler, Mickey Spillane, and Dashiell Hammett. Often film noir (which has several specific themes and even recurring images, such as spiral staircases) adopts a hard-boiled tone. Hard-boiled narrators are usually male characters that could be described as "tough guys."
+<br><br>
+homage: a French term pronounced that way, this is "a nod of the head" in a film to a past director or actor. Directors watch lots of good and bad films, so many engage in this practice. Directors of mysteries or suspense films often include an homage to Alfred Hitchcock. The opening shot of Miller's The Road Warrior resembles Benedek's The Wild One closely enough to qualify as an homage.
+<br><br>
+hubris: the sort of pride that is so inflated that it binds, even destroys a character, even an entire people. Many characters in classical literature and Shakespeare's plays are so prideful that it destroys them; so is Satan in Milton's Paradise Lost.
+<br><br>
+I <br><br><br>
+ideology: A comprehensive world view pertaining to formal and informal thought, philosophy, and cultural presuppositions usually understood as associated with specific positions within political, social, and economic hierarchies. Many schools of modern literary criticism contend that the ideological context of both reader and author always affects the meanings assigned to or encoded in the work.
+<br><br>
+irony: "A. . . perception of inconsistency, [usually but not always humorous], in which an apparently straightforward statement or event is undermined by its context so as to give it a very different significance. . . [V]erbal irony. . . involves a discrepancy between what is said and what is really meant. . . .[S]tructural irony. . . involves the use of a naive or deluded hero or unreliable narrator whose view of the world differs widely from the true circumstances recognized by the author and readers. . . . [In] dramatic irony. . . the audience knows more about a character's situation than a character does foreseeing an outcome contrary to a character's expectations, and thus ascribing a sharply different sense to the character's own statements". (CB)
+<br><br>
+M <br><br><br>
+magical realism: a type of fiction in which the world appears just as ours in all respects but very extraordinary things happen: a poor family finds a sick angel in the back yard and nurses him back to health, one morning a man wakes up in his family's apartment to find that he's become a giant bug. Gabriel Garcia Marquez and many Latin-American writers use the technique well. Unlike science fiction, most magical realism makes no attempt to explain such events. They simply happen, often with people reacting as if such things are not all that unusual.
+<br><br>
+MacGuffin: Alfred Hitchcock coined this term; he meant plot device that makes the action happen without being important in and of itself. For instance, two strangers sitting next to each other might lead to a murder or a love affair. The plane ride is the MacGuffin. See this page on Hitchcock film techniques for more information
+<br><br>
+matte shot: The end shot of the 1968 Planet of the Apes provides a perfect example. When Taylor falls to his knees in front of the Statue of Liberty, our actors were (I'm fairly certain) facing a blank background. A painted background was added--a matte painting--of the ruined statue.
+<br><br>
+metaphor: A figure of speech "in which one thing, idea, or action is referred to by a word or expression normally denoting another thing, idea, or action, so as to suggest some common quality shared by the two." The term, "metaphor" is often reserved for figures of speech in which the comparison is implicit or phrased as an "imaginary identity," but it has become more common in recent years to refer to all figures of speech that depend upon resemblances as metaphors. You will therefore sometimes hear similes, where the comparison is explicit and no identity is implied, referred to as metaphorical figures. All metaphors, in any case, are based on the implicit formula, phrased as a simile, "X is like Y." The primary literal term of the metaphor is called the "tenor" and the secondary figurative term is the "vehicle." "[I]n the metaphor "the road of life", the tenor is "life" and the vehicle is "the road" (CB).
+<br><br>
+metonymy: "A figure of speech that replaces the name of one thing with the name of something else closely associated with it" (CB). The figure is based upon logical connections other than resemblance. For example, you might use "sail" to refer to "ship," as in "I saw a sail on the horizon." This metonymy replaces the name of the whole thing with the name of one of its constituent parts. This kind of metonymy is called synecdoche. Also very common is replacing the name of a thing with its location, e.g. replacing "President" with "White House," or replacing "Congress" with "Capitol Hill."
+<br><br>
+mimesis: "The Greek word for imitation. . . . A literary work that is understood to be reproducing an external reality or any aspect of it is described as mimetic." (CB)
+<br><br>
+mise-en-scene: unlike montage, mise-en-scene is physically what is in a shot or scene and does not involve editing. It can involve camera movement and focus, placement of people or objects, and other elements a director can make happen on the set rather than later on in the editing process.
+<br><br>
+mode: "An unspecific critical term usually identifying a broad but identifiable literary method, mood, or manner that is not tied exclusively to a particular form or genre. [Some] examples are the satiric mode, the ironic, the comic, the pastoral, and the didactic." (CB)
+<br><br>
+modernism: a design feature of architecture that strips ornament from structures in favor of clean, geometric design, expanses of glass, and exposed building elements. Modernist buildings do not try to look like older forms. Literary modernism is another matter, but in literature, Modernist works are also realistic (no pretense at being an older form) and can be spare (think of Hemingway's fiction).
+<br><br>
+montage: how directors connect ideas in a film. The shots are put together deliberately with transitions and by theme so that "elements should follow a particular system, and these juxtapositions should play a key role in how the work establishes its meaning, and its emotional and aesthetic effects" (Manovich 158).
+<br><br>
+motif: A recurrent image, word, phrase, represented object or action that tends to unify the literary work or that may be elaborated into a more general theme. Also, a situation, incident, idea, image, or character type that is found in many different literary works, folktales, or myths. (CB& HH, adapted)
+<br><br>
+N <br><br><br>
+
+naturalism & Social-Darwinism: simple difference here; naturalistic works depict life as it is, "warts and all," without romanticizing. It can depict rich and poor, healthy and ill, young and old without the sentimental treatment one might get, say, in Uncle Tom's Cabin. Social-Darwinist work tends to feature humans under the influence of outside or internal forces that reduce them to the level of animals, prey to their instincts. Consider these lines from Norris' McTeague: "McTeague's mind was as his body, heavy, slow to act, sluggish. Yet there was nothing vicious about the man. Altogether he suggested the draught horse, immensely strong, stupid, docile, obedient." Steinbeck's The Grapes of Wrath contains both elements; Goldings' Lord of the Flies provides an archetypal example of Social-Darwinism.
+<br><br>
+novel: Usually an extended realistic fictional prose narrative most often describing "a recognizable secular social world often in a skeptical and prosaic manner. . . ." (CB)
+<br><br>
+P <br><br><br>
+paradox: "A statement or expression so surprisingly self-contradictory as to provoke us into seeking another sense or context in which it would be true. . . "Paradoxical language is valued in literature as expressing "a mode of understanding [that] . . . challenges our habits of thought." (CB)
+<br><br>
+point of view: "The position or vantage point from which the events of a story seem to be observed and presented to us." (CB)
+<br><br>
+polemic: a work that intends to stir up controversy. A polemical work can be didactic and/or entertaining. Technically, it does not have to be a "rant." Still, in popular usage a polemic has come to mean a pointed and heated film or piece of writing intended to stir up its audience.
+<br><br>
+post-apocalyptic: fictional worlds depicting life after a global disaster such as a nuclear holocaust, alien invasion, or ecological collapse. The tone is usually grim, so The Hitchhiker's Guide to the Galaxy, a comic piece of science fiction occurring after the earth is destroyed, would not be post-apocalyptic. Planet of the Apes, in its original 1968 movie form, is both dystopian and post-apocalyptic (evolved apes running a society with human slaves thousands of years after a nuclear war).
+<br><br>
+prose: "In its broadest sense the term is applied to all forms of written or spoken expression not having a regular rhythmic pattern." (HH) "[A]lthough it will have some form of rhythm and some devices of repetition and balance, these are not governed by a regularly sustained formal arrangement, the significant unit being the sentence rather than the line." (CB)
+<br><br>
+protagonist: Central figure(s) in a text or film.
+<br><br>
+S <br><br><br>
+scene: a series of connected shots that establish location and continuity. The scene ends by cutting (often using a visible transition) to another location, time, or person. A "car-chase scene" is a rather common example where several cameras follow the action from different perspectives and are edited to make one long scene.
+<br><br>
+shot: part of a film presented without any editing, as seen from a single camera's perspective. A shot can include close-ups, panoramic shots, camera movement, and other techniques.
+<br><br>
+sign: "A basic element of communication, either linguistic. . . . or non-linguistic . . . .; or anything that can be construed as having a meaning. . . . [E]very sign has two inseparable aspects, the signifier, which is the materially perceptible component such as a sound or written mark, and the signified, which is the conceptual meaning." (CB) The "signified" is the abstract and conceptual content of the sign and can be carried from context to context (e.g., the idea of "chair"). "Referent" is the term used to describe the specific object to which a sign refers in a given context (e.g. "the chair in my office").
+<br><br>
+story arc: the manner in which films and fiction proceed. These works may have a "turning point" or several of them, a climax, and then an "end game" or denouement.
+<br><br>
+subjectivity: "The quality originating and existing in the mind of a perceiving subject and not necessarily corresponding to any object outside that mind." (HH) In literary critical usage, texts which explore the nature of such a perceiving subject are said to be interested in subjectivity.
+<br><br>
+subtext: While not explicitly part of the plot, this novel deals heavily with religious ideas and themes from both Christianity and Buddhism. They are a subtext that runs beneath the plot and influences it.
+<br><br>
+surrealism: associated with painting and film more than with writing, but the term has grown with use. Surrealist work tends to delve into the nonsensical, or the wildest sides of psychological and physical experiences. Some horror movies become surreal (a man's severed hand begins to stalk him) and even in realistic work, surreal scenes can occur. For example, Wyatt's and Billy's acid-trip in New Orleans toward the end of Easy Rider is filmed from their LSD-soaked points of view, so for the viewer this sequence of scenes is surrealistic. Surrealist work can be absurd, but a film such as the comedy Office Space would more accurately be called black comedy.
+<br><br>
+symbol: "[S]omething that is itself and also stands for something else. . . . In a literary sense, a symbol combines a literal and sensuous quality with an abstract or suggestive aspect." (HH)
+<br><br>
+syntax: "The way in which words and clauses are ordered and connected so as to form sentences; or the set of grammatical rules governing such word order." (CB)
+<br><br>
+T <br><br><br>
+technological sublime: British Romantics and American Transcendentalists felt a power beyond themselves, often a healing and teaching power, in nature. This feeling came to be know as the Sublime. Futurists like Marinetti and the businessmen, planners, and engineers depicted in the film The World of Tomorrow found solace and a power greater than themselves in technology, architecture, and industry. This feeling is a very 20th-century phenomenon; today most of the technologies we use are smaller and ubiquitous.
+<br><br>
+telling detail: language or a visual element, sometimes seemingly minor, that shows a great deal about a character, setting, or an event. When Ahab tosses his pipe into the sea in Moby Dick, it signals his mania to chase the white whale, even if it means surrendering the domestic comforts of his prior life. Some instances of foreshadowing provide telling details to readers or viewers.
+<br><br>
+tension: in most texts and films we study, several tensions may exist. These are dramatic or even melodramatic elements of plot, setting, or character that serve to "move things along" well. Unlike a MacGuffin, however, the tension is significant. A love triangle might not be the subject of a film, for instance, but it would certainly be one of the tensions.
+<br><br>
+theme: "A salient abstract idea that emerges from a literary work’s treatment of its subject-matter; or a topic occurring in a number of literary works." (CB)
+<br><br>
+topos (plural, topoi): A term for a type of convention specific to a given genre. Derived from the Greek term for "place," the term usually refers to a convention, motif, trope, or figure of speech that regularly appears at a particular point in the formal structure of works in a given genre, the absence or unconventional treatment or placement of which will always have profound significance for an interpretation of the work. For example, an epic without an invocation.
+<br><br>
+transition: the type of editing technique used to connect shots. Sometimes there is no transition, and others can be quite complicated. Fading to black is a popular transition, as are wipes and dissolves.
+<br><br>
+trope: A term often used to denote figures of speech in which words are used in a sense different from their literal meaning. Distinguished from figures of speech based upon word order or sound pattern.
+<br><br>
+</div>
+<div class="positive" id="positive" style="display:none">
+  <iframe src="positive/index.html" width="100%" height="400"></iframe>
+</div>
+<div class="meditation" id="meditation" style="display:none">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IU13sdrLQ-M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<p class='footer'>©2017 Transparency Interactive</p>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script type="module" src="js/index.js"></script>
+
+
+
+
+</body>
+
 </html>
