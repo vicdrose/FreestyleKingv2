@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" >
+
 <head>
   <meta charset="UTF-8">
-  <title>Freestyle King</title>
+  <title>FKOfficial1</title>
   
   
-      <link rel='stylesheet prefetch' href='bootstrap-3.3.7-dist/css/bootstrap.min.css'>
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/animate.css">
-      <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+
       <link rel="stylesheet" href="css/style.css">
 
+  
 </head>
 
 <body>
 
-<div class="yellow-box">
+  <div class="yellow-box">
 
    <button class="btn top-bar" style="text-align:left" onclick="MainMenu()">MAIN MENU</button>
    <button class="btn top-bar" onclick="Beats()">BEATS</button>
@@ -55,28 +56,31 @@
 <div id="menu" class="main-menu btn-group-vertical" style="display: block;">
   
  <div class="logo">
-      <img class="logo" src='logo.png'></img>
+      <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
     </div>
 
 
       <button class='btn btn-black' onclick="Start()">Freestyle</button>
       <button class='btn btn-black' onclick="Notebook()">Notebook</button>
       <button class='btn btn-black' onclick="Extras()">Extras</button>
-<button class='btn btn-black'><a href="http://34.227.150.25/shop">Store</a></button>
+<button class='btn btn-black'><a href="window.open('http://34.227.150.25/shop','_self')" style="color:white">Store</a></button>
 <button class='btn btn-black' onclick="About()">Support </button>
-    <br>
+    <br><br>
       <!--<button class='btn btn-black' onclick="About()">About</button>-->
-    <br>
   
      <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fvictorrose&color=orange_white&size=64" style="width: 64px; height: 64px;"></iframe>
   </div>
 
 <div class="extra" id="extra" style="display:none">
   <div class="logo">
-      <img class="logo" src='logo.png'></img>
+      <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
     </div>
    <button class='btn btn-black' onclick="Glossary()">Glossary</button>
     <button class='btn btn-black' onclick="Positive()">Positive Affirmations</button>
+<button class='btn btn-black' onclick="Meditation()">Meditation</button>
+<br><br>
+  <iframe src="https://player.twitch.tv/?channel=xmastervic" frameborder="0" allowfullscreen="true" scrolling="no" height="auto" width="auto"></iframe>
+
       </div>
 
 <div id='start' style="display:none;">
@@ -120,27 +124,20 @@
 <button onclick=randomA()>-A-</button><button onclick=randomE()>-E-</button><button onclick=randomI()> -I- </button><button onclick=randomO()> -O- </button><button onclick=randomU()> -U- </button><br><button onclick=randomah()>Ah</button><button onclick=randomeh()>eh</button><button onclick=randomih()>ih</button><button onclick=randomowh()>owh</button><button onclick=randomuh()>uh</button>
   <br><br>
     <!-- Trigger/Open The Modal -->
-<button id="relationshipBtn">Relationship</button>
+<button id="relationshipBtn">Rhymes</button>
+<button id="slBtn">Sounds like</button>
+<button id="synBtn">Synonyms</button>
+
 
 <!-- The Modal -->
 <div id="relationshipModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
+  <div class="modal-content relationshipresults">
     <span class="close1">&times;</span>
-<div class='row' width='100%'>
-  <div class='lg-col-4'>
 <div class='well'>Rhymes</div>
-  <div class='well' id='rhyres'>Results</div>
-</div>
-    <div class='lg-col-4'>
-<div class='well'>Sounds Like</div>
-  <div class='well' id='slres'>Results</div>
-</div>
-<div class='lg-col-4'>
-<div class='well'>Synonyms</div>
-<div class='well' id='synres'>Results</div>
-</div>
+  <div class='well' id='rhyres' style='text-align: center'>Results</div>
+
   <!--<div class='lg-col-4'>
     <div class='well'>Pivot</div>
   <div class='well' id='slres'>Results</div>
@@ -153,9 +150,52 @@
   
 </div>
 </div>
+  
+  <div id="slModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content slResults">
+    <span class="close2">&times;</span>
+<div class='well'>Sounds Like</div>
+  <div class='well' id='slres'>Results</div>
+
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
 </div>
+</div>
+  
+  <div id="synModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content synBtn">
+    <span class="close3">&times;</span>
 
+<div class='well'>Synonyms</div>
+<div class='well' id='synres'>Results</div>
+  <!--<div class='lg-col-4'>
+    <div class='well'>Pivot</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  <!-- Translations go here  UPDATE
+<div class='lg-col-4'>
+  <div class='well'>Translations</div>
+  <div class='well' id='slres'>Results</div>
+</div>-->
+  
+</div>
+</div>
+  
+  
+
+<br>
 <button onclick=#><s>Suggestions</s></button>
   <button onclick=#><s>Translations</s></button>
 <!--</div>-->
@@ -177,7 +217,6 @@
   
 <button id="quptalbtn">Show Quote</button>
 <br><br><br>
-  <iframe src="https://player.twitch.tv/?channel=xmastervic" frameborder="0" allowfullscreen="true" scrolling="no" height="auto" width="auto"></iframe>
   <!--<div class='row' width='100%'>
   <div class='lg-col-4'>
 <div class='well'>Rhymes</div>
@@ -209,12 +248,12 @@
   <!-- Modal content -->
 
   <div class="quotal-content" >
-    <span class="close2">x</span>
+    <span class="close4">x</span>
 
     <h1>Freestyle King</h1>
 <br>
   <div id="logo">
-   <img class="logo" src='logo.png'></img>
+   <img class="logo" src='https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/15349672_394425614236544_8366033611961976431_n.png?_nc_cat=0&oh=a1f26a8914c036366410c061964320d1&oe=5C04D544'></img>
   </div>
 
 
@@ -309,6 +348,11 @@
  <br>
    <iframe width="50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/273242242&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
   
+  <br>
+  
+  <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXc8kgYqQLMfH" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  
+  <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX3qCx5yEZkcJ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
 
 
@@ -506,37 +550,21 @@ trope: A term often used to denote figures of speech in which words are used in 
 <div class="positive" id="positive" style="display:none">
   <iframe src="positive/index.html" width="100%" height="400"></iframe>
 </div>
-<p class='footer'>©2017 Transparency Interactive</p>
-  <script src='js/jquery-3.2.1.js'></script>
-  <script src="https://w.soundcloud.com/player/api.js"></script>
-  <script src="js/index.js"></script>
-<script>
-  function onDeviceReady() {
-  
-      document.removeEventListener('deviceready', onDeviceReady, false);
-      
-      // Set AdMobAds options: 
-     window.admob.setOptions({
-        publisherId:          "pub-0137702917028406",  // Required 
-        interstitialAdId:     "ca-app-pub-0137702917028406/9181679045",  // Optional 
-        banner:               "ca-app-pub-0137702917028406/8301564412"
-       tappxIdiOS:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional 
-        tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional 
-        tappxShare:           0.5                                        // Optional
-      });
-      
-      // Start showing banners (atomatic when autoShowBanner is set to true) 
-      window.admob.createBannerView();
-      
-      // Request interstitial (will present automatically when autoShowInterstitial is set to true) 
-      window.admob.requestInterstitialAd();
-    }
-    
-    document.addEventListener("deviceready", onDeviceReady, false);
-    
-    window.admob.createBannerView({publisherId: "pub-0137702917028406"});
+<div class="meditation" id="meditation" style="display:none">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IU13sdrLQ-M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-</script>
+<p class='footer'>©2017 Transparency Interactive</p>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script src="js/index.js"></script>
+
+
+
 
 </body>
+
 </html>
