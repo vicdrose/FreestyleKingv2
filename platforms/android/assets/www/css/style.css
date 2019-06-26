@@ -2,19 +2,21 @@ body{
   
   background-color: Black;
   text-align: center;
-    text-shadow: 1px 1px 2px #000000;
-}
+	text-shadow: 1px 1px 2px #000000;
+  color: #F7F3CE;
+
+} 
 
 .yellow-box{
   background-color: #ffce00;
-    color: black;
-    outline-style: solid;
-    outline-color: white;
-    outline-width: 1px;
+	color: black;
+	outline-style: solid;
+	outline-color: white;
+	outline-width: 1px;
 }
 .top-bar{
-    background: #ffce00;
-    color: white;
+	background: #ffce00;
+	color: white;
   text-shadow: 2px 2px 4px #000000;
 }
 .btn-black{
@@ -32,17 +34,9 @@ body{
   color: black;
   width: 200px;
 }
-body {
-  text-align: center;
-  text-shadow: 1px 1px black;
-  color: #F7F3CE;
-  background-color: #000
-}
+
 h1{
   font-size: 200%;
-}
-button{
-    color: black;
 }
 /* Dropdown Button */
 .dropbtn {
@@ -115,13 +109,29 @@ button{
     font-size: 28px;
     font-weight: bold;
 }
+
 .close1 {
     color: #aaa;
     float: left;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close2 {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close3 {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close4 {
     color: #aaa;
     float: left;
     font-size: 28px;
@@ -147,6 +157,20 @@ button{
     cursor: pointer;
 }
 
+.close3:hover,
+.close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close4:hover,
+.close4:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .logo{
   display: block;
     margin: auto;
@@ -164,3 +188,6 @@ img {
 p.footer{
   text-align: right;
 }
+.relationshipResults{
+  text-align: center;
+  }

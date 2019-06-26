@@ -24,6 +24,59 @@ window.onclick = function(event) {
     }
 }
 
+/////////////////
+// Get the modal
+var modal2 = document.getElementById('slModal');
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("slBtn");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on the button, open the modal 
+btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+//////
+// Get the modal
+var modal3 = document.getElementById('synModal');
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("synBtn");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close3")[0];
+
+// When the user clicks on the button, open the modal 
+btn3.onclick = function() {
+    modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
+
 function Start() {
   document.getElementById("menu").style.display="none";
   document.getElementById("Notebook").style.display="none";  
@@ -41,7 +94,8 @@ function Beats(){
   document.getElementById("about").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";
-  
+      document.getElementById("meditation").style.display="none";
+
 
 }
 function Positive(){
@@ -56,7 +110,8 @@ function Positive(){
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";
   document.getElementById("beats").style.display="none";
- 
+     document.getElementById("meditation").style.display="none";
+
 
 }
 function Music(){
@@ -70,12 +125,16 @@ function Music(){
   document.getElementById("about").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";
+    document.getElementById("meditation").style.display="none";
 
 
 }
 function MainMenu(){
+       document.getElementById("meditation").style.display="none";
   document.getElementById("positive").style.display = "none";
   document.getElementById("menu").style.display = "block";
+    document.getElementById("logo").style.display="block";
+
   document.getElementById("beats").style.display = "none";
   document.getElementById("about").style.display="none";
   document.getElementById("Notebook").style.display="none";  
@@ -84,7 +143,7 @@ function MainMenu(){
   document.getElementById("start").style.display="none";
   document.getElementById("extra").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
-  document.getElementById("twitch").style.display="none";
+  document.getElementById("twitch").style.display="none";   
 }
 function About(){
    document.getElementById("about").style.display = "block";
@@ -95,6 +154,8 @@ function About(){
   document.getElementById("extra").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";
+      document.getElementById("meditation").style.display="none";
+
 }
 function Extras(){
   document.getElementById("Notebook").style.display="none";  
@@ -105,6 +166,8 @@ function Extras(){
   document.getElementById("about").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";
+      document.getElementById("meditation").style.display="none";
+
 }
 function Radio(){
 
@@ -119,6 +182,8 @@ function Notebook(){
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";
       document.getElementById("glossary").style.display="none";
+      document.getElementById("meditation").style.display="none";
+
 
 }
 
@@ -197,7 +262,7 @@ var modal = document.getElementById('quotal');
 var btn = document.getElementById("quptalbtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close2")[0];
+var span = document.getElementsByClassName("close4")[0];
 
 // When the user clicks on the button, open the modal 
 btn.onclick = function() {
@@ -221,6 +286,8 @@ function other2(Input){
   var res =  document.getElementById('result').innerHTML = Input;
   other(res);
   modal1.style.display = "none";
+  modal2.style.display = "none";
+  modal3.style.display = "none";
 }
 
 
@@ -2535,5 +2602,23 @@ function Glossary(){
   document.getElementById("glossary").style.display="block";
   document.getElementById("advanced").style.display="none";
   document.getElementById("about").style.display = "none";
+    document.getElementById("meditation").style.display="none";
 
+
+}
+function Meditation(){
+  document.getElementById("meditation").style.display="block";
+  document.getElementById("logo").style.display="none";
+  document.getElementById("menu").style.display="none";
+  document.getElementById("extra").style.display="none";
+  document.getElementById("start").style.display="none";
+  document.getElementById("Soundcloud").style.display = "none";
+  document.getElementById("twitch").style.display="none";
+  document.getElementById("Build").style.display = "none";
+  document.getElementById("random1").style.display="none";
+  document.getElementById("positive").style.display="none";
+  document.getElementById("glossary").style.display="block";
+  document.getElementById("advanced").style.display="none";
+  document.getElementById("about").style.display = "none";
+ 
 }
