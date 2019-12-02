@@ -14,6 +14,7 @@
     <icon platform="android" qualifier="xxhdpi" src="www/logo.png" />
     <preference name="loadUrlTimeoutValue" value="700000" />  <icon platform="android" qualifier="xxxhdpi" src="www/logo.png" />
     <preference name="android-targetSdkVersion" value="28" />
+    <preference name="fullscreen" value="true" />
     <icon platform="android" qualifier="fr-xxhdpi" src="www/logo.png" />
     <allow-navigation href="*" />
     <content src="index.html" />
