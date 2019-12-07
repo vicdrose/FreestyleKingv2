@@ -4,6 +4,7 @@ body{
   text-align: center;
 	text-shadow: 1px 1px 2px #000000;
   color: #F7F3CE;
+  height: 100%; /* Full height */
 
 } 
 
