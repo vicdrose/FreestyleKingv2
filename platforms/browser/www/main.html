@@ -60,8 +60,8 @@
     </div>
 
 
-      <button class='btn btn-black' onclick="Start()">Freestyle</button>
-      <button class='btn btn-black' onclick="Notebook()">Notebook</button>
+      <button class='btn btn-black' onclick="Start()">Begin</button>
+      <button class='btn btn-black' onclick="Tutorial()">Tutorial</button>
       <button class='btn btn-black' onclick="Extras()">Extras</button>
 <button class='btn btn-black'><a href="http://victordrose.com/shop/page/2/" style="color:white">Store</a></button>
 <button class='btn btn-black' onclick="About()">Support </button>
@@ -99,7 +99,7 @@
 <br>
 <h4>Random</h4>
 <button onclick=roll()>Compound Word</button>
-<button onclick=rollCommon()> Common Word</button><br>
+<button onclick=rollCommon()> Random Word</button><br>
 <button onclick=rollAdj()>Adjective</button> 
 <button onclick=rollAdv()>Adverb</button>
 <button onclick=rollVerbs()>Verbs</button><br>
@@ -248,7 +248,40 @@
   <div class='well'>Translations</div>
   <div class='well' id='slres'>Results</div>
 </div>-->
+<button class='btn btn-black' onclick="Notebook()">Notebook</button>
+
+<div id='Notebook' style="display:none;"> 
+<div>
+  <form method="post" name="postForm">
+    <label for="name">Bars: </label><br><br>
+ Title: <input rows="4" cols="50" type="text" name="title" id="title"  placeholder="title"/><br>
+  Beat: <input rows="4" cols="50" type="text" name="beat" id="beat"  placeholder="beat"/><br>
+  Lyrics: <textarea rows="5" cols="25" type="text" name="lyrics" id="lyrics"  placeholder="Filibustering flight attendants trying to figure out the best way to fly from here to neptune without consuming jet fumes"></textarea>
+  <!--<input type="submit" value="Send">-->
+  <!--<button onclick="saveRap(document.getEkementById('title'),document.getEkementById('beat'),document.getEkementById('Lyrics'))">Go</button>-->
+</form>
+<br>
+<button onclick="saveRap()">Go</button>
+<!--  <div id='texttospeech'>
+  <button id="start_button" onclick="startDictation(event)">Dictate</button>
+</div>
+   <div id="results">
+  <span id="final_span" class="final"></span>
+  <span id="interim_span" class="interim"></span>
+</div>
+ -->
+<button onclick="Clear()">Clear Input </button>
+<br><br>
+<div id="output" class="well">Raps will live here<br><br>
   
+  Press <b>clear all raps</b> at the bottom before first use to unlock.</div>
+<br><br>
+ 
+<button onclick=ClearAll()>Clear All Raps
+</button> 
+  </div> 
+</div>
+</div>
 </div>
 <!-- The Modal -->
 
@@ -315,40 +348,6 @@
 
 </div>
 
-<div id='Notebook' style="display:none;">
-  Notebook 
-<div>
-  <form method="post" name="postForm">
-    <label for="name">Bars: </label><br><br>
- Title: <input rows="4" cols="50" type="text" name="title" id="title"  placeholder="title"/><br>
-  Beat: <input rows="4" cols="50" type="text" name="beat" id="beat"  placeholder="beat"/><br>
-  Lyrics: <textarea rows="5" cols="25" type="text" name="lyrics" id="lyrics"  placeholder="Filibustering flight attendants trying to figure out the best way to fly from here to neptune without consuming jet fumes"></textarea>
-  <!--<input type="submit" value="Send">-->
-  <!--<button onclick="saveRap(document.getEkementById('title'),document.getEkementById('beat'),document.getEkementById('Lyrics'))">Go</button>-->
-</form>
-<br>
-<button onclick="saveRap()">Go</button>
-<!--  <div id='texttospeech'>
-  <button id="start_button" onclick="startDictation(event)">Dictate</button>
-</div>
-   <div id="results">
-  <span id="final_span" class="final"></span>
-  <span id="interim_span" class="interim"></span>
-</div>
- -->
-<button onclick="Clear()">Clear Input </button>
-<br><br>
-<div id="output" class="well">Raps will live here<br><br>
-  
-  Press <b>clear all raps</b> at the bottom before first use to unlock.</div>
-<br><br>
- 
-<button onclick=ClearAll()>Clear All Raps
-</button> 
-  </div> 
-</div>
-</div>
-
 
 
 <div id="beats" style="display:none;">
@@ -409,6 +408,30 @@
 Try out the WIP: <button class='btn btn-black'> <a href="http://freestylekingapp.com"> Ghetto Beta </a></button> 
 
   </div>
+
+  <div id='Tutorial' style="display:none;text-align: left;">
+Tutorial<br><br>
+
+    Thanks for downloading Freestyle King! I hope you're here for the long haul because I have big plans for this glob of code.<br> <br>
+    <ol>
+        <li>First, click on the start button, here you have a nice little quote, press anywhere outside of the pop up, then right into the main screen</li>
+        <li>On this main screen you are given a random word as a result...the buttons on the very bottom are relationship buttons, when you press on one a screen with all the results pertaining to the current word pop up</li>
+        <li>Ryhmes shows words that rhyme (Dog / Frog), Sounds like shows words that sound similar (unless, unleash), Synonyms are words that are similar in meaning (tasty / delicious).</li>
+        <li>You can just use these words to start rapping or freestyling OR</li>
+        <li>You can press on a word to make that word then new result word  being related to, make sure the word is just one word and not two i.e. "fountain" not "water fountain"</li>
+        <li>Right above the bottom cluster are the phonetics, these are used for words where you want to rhyme inside of a word, press it and a word with the phonetic chosen appears. </li>
+        <li>Now the top sets of buttons, these are categories, Compound words are words combining two smaller words together, Common Word is just totally random words, The next 9 buttons are obvious enough that I feel the need to explain.</li>
+        <br>
+        <li>Lasty, Please Donate!! and contact me @vicroseinfinite with good news, raps, or issues you come across. Also send me improvement suggestions, I have a lot in the works.</li>
+        <li>I know it's not the best looking app in the world but it is a pretty cool app feature wise.</li><br>
+        <li>The biggest addition coming is the ability to record over raps and post to the community, for now, I would recommend using the recorder on your phone <b>Voice Memos</b> or maybe download <b>Hi-Q MP3 Voice Recorder</b>, then<br> press the beats button and play a beat, then quickly press main menu and begin, then start freestyling chaining words together </li>
+        <br<li>Check out my music and beats, my first album is the first result on the music tab and my beat store is the first result of the beats tab.</li>
+        <li><b>That's all folks!</b> Freestyle King 2.0 on the way! Be sure to meditate, say some positive affirmations and catch me live gaming and rapping or making beats in the extras tab.</li>
+        <li>Contact me for apps, websites, games, or beats <a href="mailto:victordrose@gmail.com">here</a>  </li> 
+    </ol>
+
+  </div>
+
 
 <div class="glossary" id="glossary" style="display:none; text-align:left; width:80%; margin:50px">
     Glossary<br><br>
