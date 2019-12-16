@@ -79,7 +79,8 @@ window.onclick = function(event) {
 
 function Start() {
   document.getElementById("menu").style.display="none";
-  document.getElementById("Notebook").style.display="none";  
+  document.getElementById("Notebook").style.display="none";
+  document.getElementById("beatmaker").style.display="none";    
   document.getElementById("start").style.display = "block";
   document.getElementById("Tutorial").style.display="none";
   quotal.style.display = "block";
@@ -97,6 +98,8 @@ function Beats(){
   document.getElementById("twitch").style.display="none";
   document.getElementById("meditation").style.display="none";
   document.getElementById("Tutorial").style.display="none";
+  document.getElementById("beatmaker").style.display="none";    
+
 }
 function Positive(){
   document.getElementById("glossary").style.display="none";
@@ -112,6 +115,8 @@ function Positive(){
   document.getElementById("beats").style.display="none";
   document.getElementById("meditation").style.display="none";
   document.getElementById("Tutorial").style.display="none";
+  document.getElementById("beatmaker").style.display="none";    
+
 }
 function Music(){
   document.getElementById("glossary").style.display="none";
@@ -126,7 +131,9 @@ function Music(){
   document.getElementById("twitch").style.display="none";
   document.getElementById("meditation").style.display="none";
   document.getElementById("Tutorial").style.display="none";
+  document.getElementById("beatmaker").style.display="none";    
 }
+
 function MainMenu(){
   document.getElementById("Tutorial").style.display="none"; 
   document.getElementById("meditation").style.display="none";
@@ -142,9 +149,11 @@ function MainMenu(){
   document.getElementById("extra").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
   document.getElementById("twitch").style.display="none";  
+  document.getElementById("beatmaker").style.display="none";    
 }
+
 function About(){
-   document.getElementById("about").style.display = "block";
+  document.getElementById("about").style.display = "block";
   document.getElementById("Notebook").style.display="none";  
   document.getElementById("beats").style.display = "none";
   document.getElementById("menu").style.display = "none";
@@ -155,6 +164,7 @@ function About(){
   document.getElementById("meditation").style.display="none";
   document.getElementById("Tutorial").style.display="none";
 }
+
 function Extras(){
   document.getElementById("Notebook").style.display="none";  
   document.getElementById("menu").style.display = "none";
@@ -182,16 +192,30 @@ function Notebook(){
   document.getElementById("glossary").style.display="none";
   document.getElementById("meditation").style.display="none";
   document.getElementById("Tutorial").style.display="none";  
-
-
-
+  document.getElementById("beatmaker").style.display="none";    
 }
+
 function Tutorial(){
   document.getElementById("Tutorial").style.display="block";  
   document.getElementById("Notebook").style.display="none";  
   document.getElementById("menu").style.display = "none";
   document.getElementById("music").style.display = "none";
   document.getElementById("start").style.display="none";
+  document.getElementById("extra").style.display="none";
+  document.getElementById("about").style.display="none";
+  document.getElementById("Soundcloud").style.display="none";
+  document.getElementById("twitch").style.display="none";
+  document.getElementById("glossary").style.display="none";
+  document.getElementById("meditation").style.display="none";
+  document.getElementById("beatmaker").style.display="none";    
+}
+
+function Beatmaker(){
+  document.getElementById("beatmaker").style.display="block";    
+  document.getElementById("Tutorial").style.display="none";  
+  document.getElementById("Notebook").style.display="none";  
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("music").style.display = "none";
   document.getElementById("extra").style.display="none";
   document.getElementById("about").style.display="none";
   document.getElementById("Soundcloud").style.display="none";
