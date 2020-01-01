@@ -20,5 +20,6 @@
     <gap:plugin name="phonegap-admob" source="npm" />
     <preference name="loadUrlTimeoutValue" value="700000" />
     <preference name="android-targetSdkVersion" value="28" />
+    <preference name="android-usesCleartextTraffic" value="true" />
     <preference name="StatusBarBackgroundColor" value="ffce00" />
 </widget>
