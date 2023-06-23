@@ -13,7 +13,7 @@
   "dependencies": {
     "cordova-admob": "^4.1.16",
     "cordova-admob-sdk": "^0.16.0",
-    "cordova-android": "~6.3.0",
+    "cordova-android": "~12.0.0",
     "cordova-connectivity-monitor": "^1.2.2",
     "cordova-google-play-services": "^25.0.0",
     "cordova-plugin-admob-free": "^0.16.2",
